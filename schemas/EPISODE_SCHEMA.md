@@ -38,7 +38,7 @@ Shared cross-replication episodes are compact JSON files under `episodes/cross_r
   "prompt_token_ids": [],
   "generated_prefix_token_ids": [],
   "trigger": {
-    "criterion": "semantic, lexical, or composite",
+    "criterion": "representational, lexical, or composite",
     "first_onset_token": 0,
     "bank_token": 0,
     "sustain_tokens": 0,

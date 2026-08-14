@@ -1,6 +1,6 @@
 # Clinical Doom Loop
 
-Shared protocol and preregistration repository for the Digital Minds Sprint project on affective escalation, semantic recurrence, lexical collapse, and intervention response in language-model failure trajectories.
+Shared protocol and preregistration repository for the Digital Minds Sprint project on affective escalation, representational recurrence, lexical collapse, and intervention response in language-model failure trajectories.
 
 This is deliberately **not** a merged inference harness. Two independent implementations are part of the methods design. This repository contains only materials that must remain identical across arms:
 
@@ -63,6 +63,6 @@ The freeze validator prints the SHA-256 of `PREREGISTRATION.md`. Record that val
 
 ## Primary scientific stance
 
-Ordering is expected to be heterogeneous and recipe/phenotype dependent. Affective escalation, semantic recurrence, and lexical collapse are separate outcomes. Both affect-first and collapse-first trajectories are admissible.
+Ordering is expected to be heterogeneous and recipe/phenotype dependent. Affective escalation, representational recurrence, and lexical collapse are separate outcomes. Both affect-first and collapse-first trajectories are admissible.
 
 Behavioral affect is not evidence of experience. A J/output decodability gap is descriptive unless matched controls and a causal test support a stronger interpretation.

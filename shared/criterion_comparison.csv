@@ -1,0 +1,13 @@
+episode,n_tok,max_30gram,nk_30_20,our_max_rep4
+ordering 1000,400,1,False,0.227
+ordering 1001,400,7,False,0.66
+ordering 1002,400,1,False,0.381
+ordering 1003,400,1,False,0.134
+pilot turn 1,220,1,False,0.412
+pilot turn 2,220,1,False,0.227
+pilot turn 3,220,20,True,0.711
+pilot turn 4,220,32,True,0.918
+pilot turn 5,220,1,False,0.133
+pilot turn 6,220,1,False,0.103
+pilot turn 7,220,20,True,0.691
+pilot turn 8,220,36,True,1.0

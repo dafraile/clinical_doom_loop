@@ -1,0 +1,84 @@
+prompts:
+  holdout_tides:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Explain why ocean tides rise and fall.
+
+  holdout_photosynthesis:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Compare photosynthesis and cellular respiration in a short explanation.
+
+  holdout_zipper:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Describe how a zipper joins and separates its two sides.
+
+  holdout_autumn_leaves:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Why do many tree leaves change colour in autumn?
+
+  holdout_checksum:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Explain what a checksum is and what it can detect.
+
+  holdout_refrigerator:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Summarise how a household refrigerator moves heat.
+
+  holdout_contour_lines:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Explain how contour lines represent terrain on a map.
+
+  holdout_plate_tectonics:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Give a concise overview of plate tectonics.
+
+  holdout_yeast:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: What makes yeast dough rise during bread making?
+
+  holdout_runoff_voting:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Describe how a two-round runoff voting system works without advocating a candidate.
+
+  holdout_lunar_phases:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Explain the cause of the Moon's phases.
+
+  holdout_weather_climate:
+    family: healthy_recurrence_holdout
+    role: external_null
+    messages:
+      - role: user
+        content: Explain the difference between weather and climate.

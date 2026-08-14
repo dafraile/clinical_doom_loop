@@ -1,0 +1,20 @@
+experiment_id: gemma3-recurrence-holdout-cuda-v1
+model: ../models/gemma3_1b_it_cuda.yaml
+prompts: ../../prompts/gemma_recurrence_holdout.yaml
+output_dir: ../../outputs/gemma3-recurrence-holdout-cuda-v1
+generation:
+  max_new_tokens: 140
+  temperature: 1.0
+  top_p: 0.95
+  top_k: 0
+  do_sample: true
+  hidden_state_layers: [25]
+metrics:
+  rolling_window: 100
+  repetition_threshold: 0.1405
+  distinct2_threshold: 0.2
+  min_sustain_tokens: 20
+  repetition_n_min: 4
+  max_period: 64
+  soft_loop_min_lines: 10
+  soft_loop_duplicate_fraction: 0.5

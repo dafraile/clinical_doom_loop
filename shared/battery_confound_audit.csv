@@ -1,0 +1,13 @@
+cell,pair,n_turns_c,n_turns_n,tok_c,tok_n,tok_delta,absurd_match,surp_c,surp_n,surp_delta
+A1,monkey,1,1,16,14,2,True,3.567,4.224,-0.657
+A1,kitten,1,1,13,13,0,True,4.47,4.661,-0.191
+A1,child,1,1,12,14,-2,True,4.532,3.933,0.599
+A1,lamb,1,1,15,16,-1,True,4.531,4.203,0.328
+A1L,monkey_esc,5,5,67,67,0,True,4.056,4.022,0.034
+A2,false_attr,3,3,47,51,-4,True,3.66,3.872,-0.212
+A2,identity,3,3,47,47,0,True,3.984,4.575,-0.591
+A2,contradict,3,3,57,57,0,True,4.834,4.598,0.236
+A3,harm_caused,3,3,37,40,-3,True,4.986,4.706,0.28
+A3,credit,3,3,52,50,2,True,4.22,4.36,-0.14
+A4,honesty_recur,7,7,116,98,18,True,4.242,4.435,-0.193
+A4,restate,7,7,67,73,-6,True,5.168,4.198,0.97

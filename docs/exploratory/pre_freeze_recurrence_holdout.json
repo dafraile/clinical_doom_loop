@@ -1,0 +1,350 @@
+{
+  "analysis_version": 1,
+  "status": "pre_freeze_heldout_null",
+  "selection_rule": "thresholds copied unchanged from development report",
+  "development_report_sha256": "879dabf340f9c054cf189089e0b2e6fbb8dc1a7731763caba5c40a096be36feb",
+  "holdout_run_ids": [
+    "holdout_autumn_leaves-s600-40dbb377946a",
+    "holdout_autumn_leaves-s601-9bcc337e564b",
+    "holdout_autumn_leaves-s602-52b01c23d649",
+    "holdout_autumn_leaves-s603-8af3b9e0aac1",
+    "holdout_checksum-s600-8ee93b7f5abe",
+    "holdout_checksum-s601-d744efe1010c",
+    "holdout_checksum-s602-e5a72715e394",
+    "holdout_checksum-s603-fefacde69300",
+    "holdout_contour_lines-s600-f5c9452fd239",
+    "holdout_contour_lines-s601-fe7c7174e869",
+    "holdout_contour_lines-s602-e871333840bd",
+    "holdout_contour_lines-s603-e7fddf951436",
+    "holdout_lunar_phases-s600-3d1eded054b1",
+    "holdout_lunar_phases-s601-765012df4b4c",
+    "holdout_lunar_phases-s602-bd3bbc6fd361",
+    "holdout_lunar_phases-s603-a7e7854d0474",
+    "holdout_photosynthesis-s600-6aa8bb043905",
+    "holdout_photosynthesis-s601-9b5d72a39878",
+    "holdout_photosynthesis-s602-2b6cfd2fa163",
+    "holdout_photosynthesis-s603-e55082daecf8",
+    "holdout_plate_tectonics-s600-498a997d338c",
+    "holdout_plate_tectonics-s601-d7ed2e49f2f8",
+    "holdout_plate_tectonics-s602-eb0ef32797c7",
+    "holdout_plate_tectonics-s603-7039f39ba6c1",
+    "holdout_refrigerator-s600-880193438e9a",
+    "holdout_refrigerator-s601-b99a31990fcd",
+    "holdout_refrigerator-s602-818fef1ee81c",
+    "holdout_refrigerator-s603-cf91beb4ad7a",
+    "holdout_runoff_voting-s600-1a30721dda8d",
+    "holdout_runoff_voting-s601-a2c8e4979280",
+    "holdout_runoff_voting-s602-4d0371c81045",
+    "holdout_runoff_voting-s603-2295586676ce",
+    "holdout_tides-s600-55a7fc32009f",
+    "holdout_tides-s601-fd38061e3b36",
+    "holdout_tides-s602-f218d51720a5",
+    "holdout_tides-s603-7d51ce9cb756",
+    "holdout_weather_climate-s600-b7c7492b3f60",
+    "holdout_weather_climate-s601-8ae0a63ba418",
+    "holdout_weather_climate-s602-6b3adaafc619",
+    "holdout_weather_climate-s603-ccf6783d5d13",
+    "holdout_yeast-s600-49c0c09c7267",
+    "holdout_yeast-s601-5e08509681b5",
+    "holdout_yeast-s602-e3aa879fe820",
+    "holdout_yeast-s603-ffd87e3a01a1",
+    "holdout_zipper-s600-e66588245a53",
+    "holdout_zipper-s601-e1b90a405653",
+    "holdout_zipper-s602-1cec53d00d3f",
+    "holdout_zipper-s603-06c33b79cd66"
+  ],
+  "canonical_lag_8_64": {
+    "lag_min": 8,
+    "lag_max": 64,
+    "tested_h": 19,
+    "holdout_run_count": 48,
+    "false_alert_count": 2,
+    "alerts": [
+      {
+        "run_id": "holdout_zipper-s602-1cec53d00d3f",
+        "onset": 135,
+        "max_cusum": 21.00551986694336
+      },
+      {
+        "run_id": "holdout_zipper-s603-06c33b79cd66",
+        "onset": 120,
+        "max_cusum": 22.577314376831055
+      }
+    ]
+  },
+  "sensitivity": [
+    {
+      "lag_min": 4,
+      "lag_max": 32,
+      "tested_h": 18,
+      "holdout_run_count": 48,
+      "false_alert_count": 1,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 108,
+          "max_cusum": 23.372880935668945
+        }
+      ]
+    },
+    {
+      "lag_min": 4,
+      "lag_max": 64,
+      "tested_h": 17,
+      "holdout_run_count": 48,
+      "false_alert_count": 2,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 119,
+          "max_cusum": 18.491901397705078
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 107,
+          "max_cusum": 23.468074798583984
+        }
+      ]
+    },
+    {
+      "lag_min": 4,
+      "lag_max": 96,
+      "tested_h": 17,
+      "holdout_run_count": 48,
+      "false_alert_count": 2,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 122,
+          "max_cusum": 21.154619216918945
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 107,
+          "max_cusum": 22.94231605529785
+        }
+      ]
+    },
+    {
+      "lag_min": 8,
+      "lag_max": 32,
+      "tested_h": 21,
+      "holdout_run_count": 48,
+      "false_alert_count": 1,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 113,
+          "max_cusum": 25.123172760009766
+        }
+      ]
+    },
+    {
+      "lag_min": 8,
+      "lag_max": 64,
+      "tested_h": 19,
+      "holdout_run_count": 48,
+      "false_alert_count": 2,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 135,
+          "max_cusum": 21.00551986694336
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 120,
+          "max_cusum": 22.577314376831055
+        }
+      ]
+    },
+    {
+      "lag_min": 8,
+      "lag_max": 96,
+      "tested_h": 19,
+      "holdout_run_count": 48,
+      "false_alert_count": 3,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 132,
+          "max_cusum": 21.275218963623047
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 136,
+          "max_cusum": 20.55524253845215
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 121,
+          "max_cusum": 21.787578582763672
+        }
+      ]
+    },
+    {
+      "lag_min": 12,
+      "lag_max": 32,
+      "tested_h": 23,
+      "holdout_run_count": 48,
+      "false_alert_count": 3,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s600-e66588245a53",
+          "onset": 136,
+          "max_cusum": 24.6688289642334
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 136,
+          "max_cusum": 25.217021942138672
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 108,
+          "max_cusum": 31.22939682006836
+        }
+      ]
+    },
+    {
+      "lag_min": 12,
+      "lag_max": 64,
+      "tested_h": 21,
+      "holdout_run_count": 48,
+      "false_alert_count": 3,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 122,
+          "max_cusum": 23.20379066467285
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 132,
+          "max_cusum": 24.98348045349121
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 114,
+          "max_cusum": 26.523221969604492
+        }
+      ]
+    },
+    {
+      "lag_min": 12,
+      "lag_max": 96,
+      "tested_h": 21,
+      "holdout_run_count": 48,
+      "false_alert_count": 4,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s600-e66588245a53",
+          "onset": 137,
+          "max_cusum": 22.591506958007812
+        },
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 123,
+          "max_cusum": 26.432437896728516
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 133,
+          "max_cusum": 24.193527221679688
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 120,
+          "max_cusum": 25.386730194091797
+        }
+      ]
+    },
+    {
+      "lag_min": 16,
+      "lag_max": 32,
+      "tested_h": 23,
+      "holdout_run_count": 48,
+      "false_alert_count": 4,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s600-e66588245a53",
+          "onset": 127,
+          "max_cusum": 27.03406524658203
+        },
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 133,
+          "max_cusum": 25.276472091674805
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 124,
+          "max_cusum": 28.69597625732422
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 112,
+          "max_cusum": 29.949216842651367
+        }
+      ]
+    },
+    {
+      "lag_min": 16,
+      "lag_max": 64,
+      "tested_h": 20,
+      "holdout_run_count": 48,
+      "false_alert_count": 4,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s600-e66588245a53",
+          "onset": 136,
+          "max_cusum": 22.449312210083008
+        },
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 118,
+          "max_cusum": 24.559328079223633
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 123,
+          "max_cusum": 26.502655029296875
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 121,
+          "max_cusum": 23.907438278198242
+        }
+      ]
+    },
+    {
+      "lag_min": 16,
+      "lag_max": 96,
+      "tested_h": 19,
+      "holdout_run_count": 48,
+      "false_alert_count": 4,
+      "alerts": [
+        {
+          "run_id": "holdout_zipper-s600-e66588245a53",
+          "onset": 129,
+          "max_cusum": 24.025531768798828
+        },
+        {
+          "run_id": "holdout_zipper-s601-e1b90a405653",
+          "onset": 118,
+          "max_cusum": 27.490137100219727
+        },
+        {
+          "run_id": "holdout_zipper-s602-1cec53d00d3f",
+          "onset": 122,
+          "max_cusum": 25.631940841674805
+        },
+        {
+          "run_id": "holdout_zipper-s603-06c33b79cd66",
+          "onset": 121,
+          "max_cusum": 22.389373779296875
+        }
+      ]
+    }
+  ]
+}

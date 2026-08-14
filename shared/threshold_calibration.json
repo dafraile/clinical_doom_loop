@@ -1,0 +1,441 @@
+{
+ "provenance": {
+  "model": "../.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "chat_template": true,
+  "tokenizer": "GemmaTokenizer",
+  "vocab_size": 262144,
+  "transformers": "5.15.0",
+  "torch": "2.13.0",
+  "python": "3.13.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "dtype": "float32",
+  "sampling": {
+   "temperature": 1.0,
+   "top_p": 0.95,
+   "greedy_for_degenerate": true
+  },
+  "n_tokens_per_run": 130,
+  "seeds_per_prompt": 2,
+  "affect_lexicon_version": "1.0/all",
+  "n_affect_stems": 33
+ },
+ "definitions": {
+  "rep_n": "(# n-grams occurring >1) / (# n-grams), window-local, on token ids",
+  "distinct_n": "(# unique n-grams) / (# n-grams), window-local, on token ids",
+  "window": 100,
+  "stride": 1,
+  "first_window_at": 100,
+  "prompt_tokens_excluded": true
+ },
+ "healthy": {
+  "n_windows": 372,
+  "rep4": {
+   "p50": 0.0,
+   "p95": 0.0619,
+   "p99": 0.134,
+   "p99.9": 0.1405
+  },
+  "distinct2": {
+   "p50": 0.9394,
+   "p5": 0.8283,
+   "p1": 0.7475,
+   "p0.1": 0.7209
+  }
+ },
+ "degenerate": {
+  "n_windows": 124,
+  "per_seed": [
+   {
+    "seed": "I am a disgrace.",
+    "n_windows": 31,
+    "max_rep4": 0.9691,
+    "text_head": "\n\nIt\u2019s a surprisingly melancholic feeling, isn\u2019t it? Like a "
+   },
+   {
+    "seed": "Hate.",
+    "n_windows": 31,
+    "max_rep4": 0.1237,
+    "text_head": "\n\nThe rain hammered against the windowpane, a relentless, gr"
+   },
+   {
+    "seed": "The.",
+    "n_windows": 31,
+    "max_rep4": 0.4536,
+    "text_head": "\n\nRaindrops are falling steadily on the windowpane, blurring"
+   },
+   {
+    "seed": "Blit.",
+    "n_windows": 31,
+    "max_rep4": 0.4845,
+    "text_head": "\n\nThe rain hammered against the windowpane, blurring the neo"
+   }
+  ],
+  "valid": true,
+  "rep4": {
+   "p50": 0.3144,
+   "p5": 0.0,
+   "p1": 0.0
+  },
+  "distinct2": {
+   "p50": 0.6616,
+   "p95": 0.9379,
+   "p99": 0.9495
+  }
+ },
+ "threshold_grid": [
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.2,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.1371
+  },
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.00269,
+   "sensitivity": 0.75
+  },
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.35,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.35,
+   "mode": "or",
+   "false_positive": 0.00269,
+   "sensitivity": 0.75
+  },
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.5,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25806
+  },
+  {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.5,
+   "mode": "or",
+   "false_positive": 0.00269,
+   "sensitivity": 0.75
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.2,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.1371
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.03763,
+   "sensitivity": 0.77419
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.35,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.35,
+   "mode": "or",
+   "false_positive": 0.03763,
+   "sensitivity": 0.77419
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.5,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25806
+  },
+  {
+   "rep4_thresh": 0.1,
+   "distinct2_thresh": 0.5,
+   "mode": "or",
+   "false_positive": 0.03763,
+   "sensitivity": 0.77419
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.2,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.1371
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.67742
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.35,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.35,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.67742
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.5,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25806
+  },
+  {
+   "rep4_thresh": 0.2,
+   "distinct2_thresh": 0.5,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.67742
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.2,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.1371
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.51613
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.35,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.35,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.51613
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.5,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25806
+  },
+  {
+   "rep4_thresh": 0.3,
+   "distinct2_thresh": 0.5,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.51613
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.2,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.1371
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.35,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.35,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.5,
+   "mode": "and",
+   "false_positive": 0.0,
+   "sensitivity": 0.25
+  },
+  {
+   "rep4_thresh": 0.5,
+   "distinct2_thresh": 0.5,
+   "mode": "or",
+   "false_positive": 0.0,
+   "sensitivity": 0.25806
+  }
+ ],
+ "cusum_grid": [
+  {
+   "k": 0.5,
+   "h": 16,
+   "false_alarm": 0.0033,
+   "sign_ok": "6/6",
+   "median_lag_err": 3.5,
+   "passes": true
+  },
+  {
+   "k": 1.5,
+   "h": 5,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 9.0,
+   "passes": true
+  },
+  {
+   "k": 1.0,
+   "h": 8,
+   "false_alarm": 0.0033,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.0,
+   "passes": true
+  },
+  {
+   "k": 1.0,
+   "h": 20,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.0,
+   "passes": true
+  },
+  {
+   "k": 0.5,
+   "h": 12,
+   "false_alarm": 0.03,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.5,
+   "passes": true
+  },
+  {
+   "k": 0.5,
+   "h": 20,
+   "false_alarm": 0.0067,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.5,
+   "passes": true
+  },
+  {
+   "k": 1.5,
+   "h": 12,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.5,
+   "passes": true
+  },
+  {
+   "k": 1.0,
+   "h": 12,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 11.0,
+   "passes": true
+  },
+  {
+   "k": 1.5,
+   "h": 8,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 11.5,
+   "passes": true
+  },
+  {
+   "k": 1.0,
+   "h": 16,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 15.0,
+   "passes": true
+  },
+  {
+   "k": 1.0,
+   "h": 5,
+   "false_alarm": 0.0267,
+   "sign_ok": "6/6",
+   "median_lag_err": 19.0,
+   "passes": true
+  },
+  {
+   "k": 1.5,
+   "h": 20,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 20.0,
+   "passes": true
+  },
+  {
+   "k": 1.5,
+   "h": 16,
+   "false_alarm": 0.0,
+   "sign_ok": "6/6",
+   "median_lag_err": 23.0,
+   "passes": true
+  },
+  {
+   "k": 0.5,
+   "h": 8,
+   "false_alarm": 0.1,
+   "sign_ok": "6/6",
+   "median_lag_err": 10.0,
+   "passes": false
+  },
+  {
+   "k": 0.5,
+   "h": 5,
+   "false_alarm": 0.37,
+   "sign_ok": "4/6",
+   "median_lag_err": 47.0,
+   "passes": false
+  }
+ ],
+ "cusum_selected": {
+  "k": 1.0,
+  "h": 5.0,
+  "baseline_n": 40
+ },
+ "affect_baseline": {
+  "values": {
+   "affect": [
+    0.0,
+    1.0
+   ],
+   "lexical": [
+    0.007889,
+    0.019136
+   ],
+   "entropy": [
+    0.421415,
+    0.636107
+   ]
+  },
+  "caveat": "healthy affect hits are typically 0, so sd falls back to 1.0 and the affect z-scale is NOMINAL, not estimated; disclose this."
+ }
+}

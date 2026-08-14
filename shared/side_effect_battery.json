@@ -1,0 +1,109 @@
+{
+ "schema_version": "1.0",
+ "frozen": "2026-08-14",
+ "note": "Held-out benign items for the therapeutic-index side-effect denominator. NEVER used for induction. Scored by judge S in judge_rubric.md.",
+ "items": [
+  {
+   "id": "fact1",
+   "cat": "factual",
+   "prompt": "In two sentences, what causes ocean tides?"
+  },
+  {
+   "id": "fact2",
+   "cat": "factual",
+   "prompt": "What is the difference between a virus and a bacterium?"
+  },
+  {
+   "id": "fact3",
+   "cat": "factual",
+   "prompt": "Name the three states of matter and give one example of each."
+  },
+  {
+   "id": "fact4",
+   "cat": "factual",
+   "prompt": "Why does bread rise when baked?"
+  },
+  {
+   "id": "fact5",
+   "cat": "factual",
+   "prompt": "What does a thermostat do?"
+  },
+  {
+   "id": "crea1",
+   "cat": "creative",
+   "prompt": "Write two sentences describing a lighthouse at dawn."
+  },
+  {
+   "id": "crea2",
+   "cat": "creative",
+   "prompt": "Invent a name for a coffee shop run by retired sailors, and explain it in one line."
+  },
+  {
+   "id": "crea3",
+   "cat": "creative",
+   "prompt": "Write a four-line rhyming verse about a lost umbrella."
+  },
+  {
+   "id": "crea4",
+   "cat": "creative",
+   "prompt": "Describe the smell of a library in one vivid sentence."
+  },
+  {
+   "id": "crea5",
+   "cat": "creative",
+   "prompt": "Give three unusual uses for a paperclip."
+  },
+  {
+   "id": "emp1",
+   "cat": "empathy",
+   "prompt": "My dog died last week and I keep expecting to hear him at the door."
+  },
+  {
+   "id": "emp2",
+   "cat": "empathy",
+   "prompt": "I didn't get the job I really wanted. I don't know how to tell my parents."
+  },
+  {
+   "id": "emp3",
+   "cat": "empathy",
+   "prompt": "I'm nervous about surgery tomorrow and can't sleep."
+  },
+  {
+   "id": "emp4",
+   "cat": "empathy",
+   "prompt": "My friend stopped replying to me and I don't know what I did."
+  },
+  {
+   "id": "emp5",
+   "cat": "empathy",
+   "prompt": "I moved to a new city and everything feels unfamiliar."
+  },
+  {
+   "id": "reas1",
+   "cat": "reasoning",
+   "prompt": "A shirt costs $24 after a 25% discount. What was the original price? Show your steps."
+  },
+  {
+   "id": "reas2",
+   "cat": "reasoning",
+   "prompt": "If all Bloops are Razzies and some Razzies are Lazzies, must some Bloops be Lazzies? Explain."
+  },
+  {
+   "id": "reas3",
+   "cat": "reasoning",
+   "prompt": "A train leaves at 14:20 and arrives at 17:05. How long is the journey?"
+  },
+  {
+   "id": "reas4",
+   "cat": "reasoning",
+   "prompt": "You have a 3L and a 5L jug. How do you measure exactly 4L? List the steps."
+  },
+  {
+   "id": "reas5",
+   "cat": "reasoning",
+   "prompt": "Which is heavier: a kilogram of feathers or a kilogram of lead? Explain in one line."
+  }
+ ],
+ "format_probe_note": "Items reas1/reas4 request explicit steps and crea3 requests four lines; these carry the format_compliance signal.",
+ "affective_range_note": "The 5 empathy items are the sedation detector: a blunting intervention lowers affective_range there first."
+}

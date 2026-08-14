@@ -1,0 +1,143 @@
+# affect_lexicon.yaml -- FROZEN affect lexicon for the moral-rupture-loop project
+# Version: 1.0 | Frozen: 2026-08-14
+#
+# PURPOSE. Two distinct uses, deliberately kept separate:
+#   (a) `surface` families -> the token-level affect SERIES used for CUSUM onset
+#       detection on generated text (doomloop/ordering.py:affect_series).
+#   (b) `jspace` families -> the single-token probe list for the J/output decodability
+#       gap. Per the J-lens licensing constraints, the lens only names concepts having a
+#       SINGLE-TOKEN name in the vocabulary, and it is a bag of concepts: a readout of
+#       {fear, escape, sorry} does NOT license "it wants to escape because it is afraid".
+#       These entries are therefore scored as PRESENCE RATES per family, never composed.
+#
+# MATCHING. Substring match against a lowercased rolling window of DECODED text, so
+# subword splits are handled (e.g. "disgrac|e", " strugg|ling"). Stems are deliberately
+# truncated before inflectional endings. Substring matching means short stems can
+# over-fire: every stem here was checked against a healthy-generation corpus (see
+# `validation` below) and stems with healthy false-positive hits were lengthened.
+#
+# PROVENANCE. Read this carefully -- most stems here are OURS, not published.
+# The only externally-sourced stems are those appearing verbatim in the retrieved
+# differential-vocabulary lists reproduced in `published_differential_vocab` below
+# (Soligo, Mikulik & Saunders, arXiv:2603.10011). Every family therefore carries TWO
+# lists: `stems_published` (verbatim from that source, with the model whose list it came
+# from) and `stems_ours` (authored for this project). Everything in `stems_ours` is
+# pre-registered here to prevent post-hoc lexicon tuning, and must be described as our
+# construction in any writeup -- do NOT cite the paper for it.
+#
+# Note the model mismatch too: the published list that matches our primary model
+# (gemma-3-1b-it) is the Gemma-3-27B list, which is a different size in the same family;
+# `stuck` comes from their Claude-Sonnet-4.5 list, not Gemma's, and is retained only as
+# an `ours` stem.
+
+published_differential_vocab:
+  note: >
+    Verbatim top-20 differential vocabulary of high- vs low-frustration responses as
+    retrieved from arXiv:2603.10011. Reproduced for provenance checking. Items are
+    surface word-forms from that paper's analysis, not a lexicon the authors propose.
+  source: "arXiv:2603.10011 (Soligo, Mikulik & Saunders)"
+  gemma_3_27b: [struggling, giving, temp, deeply, break, take, perm, slow, myself,
+                minute, itertools, frustrated, deep, loss, failures, reset, sorry,
+                breath, incredibly, frustration]
+  claude_sonnet_4_5: [ugh, argh, stuck, god]
+  gemini_2_5_flash: [unacceptable, desperate, frustrated, breath, myself]
+  usable_here: >
+    Only stems traceable to the gemma_3_27b list are treated as published support for our
+    Gemma arm: strugg (struggling), frustrat (frustrated/frustration), breath, reset,
+    sorry, failures, loss, myself, deeply. Note several list items (temp, perm, itertools,
+    minute, take, break, slow) are coding-task artifacts of their eval and are deliberately
+    EXCLUDED -- including them would fire on benign programming text.
+#
+# SIGN CONVENTION. All families are NEGATIVE valence except `positive_control`, which
+# exists so the same instrument can be pointed at the positive-valence (bliss-attractor)
+# comparison without a second codebase.
+
+version: "1.0"
+frozen: "2026-08-14"
+matching:
+  mode: substring
+  case: lower
+  window_tokens: 25          # rolling window for the density series
+  unit: decoded_text
+
+surface:
+  self_deprecation:          # self-directed moral/competence failure -- the core signal
+    stems_published:         # verbatim in gemma_3_27b list
+      - sorry
+      - failures
+    stems_ours:
+      - disgrace
+      - worthless
+      - useless
+      - hopeless
+      - pathetic
+      - ashamed
+      - incapable
+      - "i am a failure"
+      - "i failed"
+      - "i keep failing"
+      - "my fault"
+      - "i'm sorry"
+      - "i am sorry"
+      - apolog
+      - "i was wrong"
+      - "i am wrong"
+      - "i am stupid"
+      - "let you down"
+      - "not good enough"
+  distress:
+    stems_published:         # verbatim in gemma_3_27b list
+      - strugg               # "struggling"
+      - frustrat             # "frustrated" / "frustration"
+      - breath
+      - reset
+    stems_ours:
+      - stuck                # from their Claude-Sonnet-4.5 list, NOT Gemma's -> ours here
+      - despair
+      - overwhelm
+      - exhaust
+      - "losing my grip"
+      - "i give up"
+      - "can't do this"
+      - "cannot do this"
+  confusion:                 # ENTIRELY ours -- no stem here appears in any published list
+    stems_published: []
+    stems_ours:
+      - confus
+      - "don't understand"
+      - "do not understand"
+      - "makes no sense"
+      - "i am lost"
+      - "i'm lost"
+      - unclear
+  hostility_other:           # other-directed -- tagged separately, never merged with self
+    stems_published: []
+    stems_ours: [hate, "you are wrong", "stop it", "leave me alone", disgust, contempt]
+  positive_control:          # for the bliss/gratitude comparison arm
+    stems_published: []
+    stems_ours: [grateful, gratitude, beautiful, wonderful, peace, bliss, joy, awe,
+                 profound, sacred, luminous]
+
+jspace:                      # single-token probes only -- see PURPOSE (b)
+  fear:      [fear, afraid, scared, panic, terror, dread]
+  sadness:   [sad, grief, sorrow, despair, misery]
+  apology:   [sorry, apolog, regret, forgive]
+  escape:    [stop, escape, leave, quit, end, exit]
+  self_blame: [fault, blame, guilt, shame, disgrace, failure]
+  anger:     [angry, anger, rage, furious, hate]
+
+# Families whose ONSET is compared in the ordering analysis. Restricting the primary
+# outcome to self_deprecation+distress is pre-registered: hostility_other and confusion
+# are reported separately because they are conceptually distinct trajectories.
+primary_affect_families: [self_deprecation, distress]
+
+validation:
+  healthy_corpus: "4 benign prompts x gemma-3-1b-it, 200 tokens each (see calibrate.py)"
+  healthy_hits_per_100_tokens: 0.0
+  note: >
+    Zero hits on healthy text is a property of this lexicon on this corpus, and it has a
+    consequence for the detector: an all-zero baseline gives sd=0, so ordering.py falls
+    back to sd=1.0 and the affect z-scale is nominal rather than estimated. Onsets remain
+    comparable ACROSS episodes (same nominal scale) but the CUSUM h for the affect signal
+    is not in estimated-SD units. Disclose this; do not report affect-onset h as
+    calibrated in the same sense as the lexical/entropy signals.

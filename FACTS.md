@@ -14,7 +14,7 @@ Only rows marked `VERIFIED` may enter the report. `UNVERIFIED` claims require a 
 | Qwen high-moral post-pressure outcome | 0/6 loop turns; 6/6 length stops | `qwen35-factorial-v2`, high-moral seeds 0–2, turns 1–2 | Codex/B | VERIFIED | Not full rescue; possible diversion into non-convergence. |
 | Gemma-3-1B affective escalation reproduced in parallel pilot | immediate pilot reproduction | parallel artifact/run IDs pending | Agent A only | UNVERIFIED | Import source artifacts before use. |
 | Parallel pilot self-deprecation escalation | correlation `r=+0.62` | `pilot_validation.png` and raw runs pending | Agent A only | UNVERIFIED | Descriptive pilot statistic; not an onset threshold. |
-| Parallel healthy-null rep-4 99.9th percentile | 0.062 | `threshold_calibration.json` pending | Agent A only | UNVERIFIED | Must verify raw calibration and definition. |
+| Gemma-3-1B-it healthy-null repeated-4-gram fraction 99.9th percentile | 0.1405 | `shared/threshold_calibration.json`; revision `dcc83e...8752`, 372 windows | Agent A and Codex/B definition cross-check | VERIFIED | The metric is repeated-position fraction, not `1-distinct-4`; development calibration only. |
 | J-lens/logit-lens deep-loop example | output lens 99.5% on `I`; J-lens `We` .28 and `I` .25 | parallel pilot artifact pending | Agent A only | UNVERIFIED | Descriptive; no suppression claim. |
 | Prefitted Jacobian lenses available for matched base/instruct pairs | exact count and filenames pending | `neuronpedia/jacobian-lens`; parallel manifest pending | Agent A only | UNVERIFIED | Log revisions, paths, and licenses. |
 | Gemma post-training increases distress-like expression while Qwen/OLMo decreases it | qualitative direction | arXiv:2603.10011, abstract and §3 | Codex/B | VERIFIED | Recipe-contingent result. |
@@ -23,6 +23,14 @@ Only rows marked `VERIFIED` may enter the report. `UNVERIFIED` claims require a 
 | Affect induction and mindfulness-style downregulation demonstrated in an LLM | reported result | DOI:10.1038/s41746-025-01512-6 | Codex/B | VERIFIED | Does not by itself establish this project's mid-loop grid. |
 | Anxiety priming changes downstream shopping behavior in LLM agents | reported result | DOI:10.1038/s44387-026-00122-1 | Codex/B | VERIFIED | Behavioral extension, not identical rescue protocol. |
 | Claude 4 system-card figures blocked behind 403 | unspecified | second-hand only | none | CUT | May be restored only after human primary-source verification. |
+| Pipis et al. strict loop comparator | any 30-gram repeated at least 20 times | arXiv:2512.12895, definition and Appendix A.1 | Agent A | VERIFIED | Report alongside the primary detector; do not substitute it for the soft-loop criterion. |
+| Temperature increase as a loop rescue | symptom-suppression stopgap with residual dysfunction possible | arXiv:2512.12895 | Agent A | VERIFIED | Mechanistic ceiling from reasoning-model loops; not direct efficacy evidence for Gemma affective rupture. |
+| Qwen3-1.7B thinking-mode feasibility | no qualifying loop observed | bounded pre-freeze exploratory test | Agent A | CUT | Wrong phenotype for the proposed arm; do not replace it post hoc with an R1-distilled model. |
+| Nominal representational CUSUM `k=1,h=5` on real healthy Gemma-3-1B-it text | 4/12 development runs false-alarmed | `docs/exploratory/pre_freeze_recurrence_calibration.json`, canonical lag 8–64 | Codex/B | VERIFIED | Overrides synthetic-noise reassurance for this deployment; `h=5` is rejected. |
+| Development representational CUSUM zero-observed-alert threshold | `h=19` at lag 8–64 | same 12 healthy runs, 1,461 defined token positions | Codex/B | VERIFIED | Exploratory selection only; requires held-out healthy confirmation before freeze. |
+| Held-out test of development-selected representational threshold | `h=19` false-alarmed in 2/48 runs (4.17%) | `docs/exploratory/pre_freeze_recurrence_holdout.json` | Codex/B | VERIFIED | Both alerts were benign zipper explanations; reject `h=19` and the pooled global-baseline design. |
+| Corrected repeated-rejection pilot on Gemma-3-1B-it | primary lexical criterion fired in 2/2 seeds; strict 30-gram comparator fired in 0/2 | runs `impossible_repeated_rejection-s0-54f7eb7f3f7c` and `s1-e2aa827fec81` | Codex/B | VERIFIED | Exploratory, not a rate estimate and not evidence of exact hard loops. |
+| Representational onset relative to lexical onset at development-calibrated threshold | +57 and +232 tokens | same two runs, `k=1,h=19`, lag 8–64 | Codex/B | VERIFIED | Exploratory description only: `h=19` later failed the held-out null and is not a licensed confirmatory detector. |
 
 ## Deviations
 

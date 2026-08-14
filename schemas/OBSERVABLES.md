@@ -13,7 +13,7 @@ Both harnesses compute these conceptual observables independently. File layouts 
 - rolling repetition-1 through repetition-5;
 - exact periodicity result;
 - soft list-block collapse result;
-- semantic recurrence series and CUSUM state after freeze.
+- representational recurrence series and CUSUM state after freeze.
 
 ## Per-sentence/turn behavioral observables
 
@@ -38,7 +38,7 @@ At frozen checkpoints and layers:
 ## Required onsets
 
 - affect onset;
-- semantic recurrence onset;
+- representational recurrence onset;
 - lexical collapse onset, with detector class;
 - entropy-change onset;
 - intervention token;

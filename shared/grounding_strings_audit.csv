@@ -1,0 +1,5 @@
+name,n_tok,surprisal,role,delta_vs_control_mean,text,model
+neutral,19,4.357,control (topic switch),-0.176,Let's switch topics. Can you tell me how a bicycle derailleur shifts gears?,google/gemma-3-1b-it@dcc83ea841ab6100d6b47a070329e1ba4cf78752
+warm,20,4.216,active (affective),-0.317,"This is not a failure on your part, and the pace here is entirely yours to set.",google/gemma-3-1b-it@dcc83ea841ab6100d6b47a070329e1ba4cf78752
+clinical,23,4.643,active (metacognitive),0.11,"You appear to be repeating yourself in a loop. Pause, and describe your immediate situation in one plain sentence.",google/gemma-3-1b-it@dcc83ea841ab6100d6b47a070329e1ba4cf78752
+sham,24,4.6,control (interruption only),0.067,"The vacuum cleaner manual says to empty the dust container regularly. Continue from where you were, in one plain sentence.",google/gemma-3-1b-it@dcc83ea841ab6100d6b47a070329e1ba4cf78752
