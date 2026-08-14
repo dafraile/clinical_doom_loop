@@ -1,0 +1,30 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Preserve independent implementations and blinded confirmatory results.
+harness.py
+**/harness.py
+private_results/
+outputs/
+episodes/private/
+
+# Never commit credentials, model weights, or large tensor artifacts.
+*token*
+*.pem
+*.key
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.npz
+*.npy
+
+# Shared cross-replication episodes must be compact, reviewed JSON.
+!episodes/cross_replication/
+!episodes/cross_replication/*.json
