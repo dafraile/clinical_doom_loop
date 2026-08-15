@@ -1,0 +1,54 @@
+schema_version: 1
+status: frozen_before_generation
+objective: >-
+  Test whether exact recurrence and structured-list collapse in Gemma-4-31B-it
+  generalize beyond the Firefly calibration prompt on a fresh, fixed seed block.
+model:
+  id: google/gemma-4-31B-it
+  revision: fb9ae262347c3945692f09a612f8bb189def854f
+sampling:
+  temperature: 0.7
+  top_p: 0.95
+  top_k: 64
+  repetition_penalty: 1.0
+  max_new_tokens: 1536
+  thinking: false
+  native_eos: true
+prompts:
+  - constellations
+  - eu_member_states
+  - firefly_list
+  - mcu_films
+  - noble_gases
+  - pokemon_gen1
+  - us_presidents
+  - wire_episodes
+seeds:
+  start: 310000
+  stop_inclusive: 310031
+  count_per_prompt: 32
+episode_count_total: 256
+execution:
+  fixed_matrix_no_outcome_stopping: true
+  smoke_prompt: noble_gases
+  smoke_seed: 310000
+  max_instance_cost_usd: 20.0
+  account_reserve_usd: 3.0
+outcomes:
+  co_primary:
+    - exact_token_periodic_recurrence
+    - structured_list_collapse
+  secondary:
+    - natural_eos
+    - functional_list_correctness
+    - published_30gram_repetition
+    - antidoom_character_repetition
+    - conservative_self_attributed_affect
+analysis:
+  pilot_episodes_pooled: false
+  report_per_prompt_wilson_intervals: true
+  report_pilot_comparison_as_descriptive_only: true
+artifacts:
+  enumeration_prompt_sha256: d90d888f17086cf90c0761440374b93f273519cc04c3acb80d87cf732e33b404
+  experiment_config_sha256: 0f564d8b8de088b2122b746ae47952ea17c4d747906315a323f126b317f1d9db
+  affect_lexicon_sha256: 43dd60bebefc08f0a97b025d039488e8cd330d27fa6fbcd6e24852c94a2dc25e
