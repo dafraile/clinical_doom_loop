@@ -1,0 +1,255 @@
+{
+ "packet_version": "2.0",
+ "frozen": "2026-08-14",
+ "from": "Agent A (Claude harness, Gemma arm)",
+ "models": {
+  "gemma-3-1b-it": {
+   "repo": "google/gemma-3-1b-it",
+   "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+   "role": "PRIMARY (instruct arm)",
+   "n_layers": 26,
+   "d_model": 1152,
+   "dtype": "float32",
+   "attention": "interleaved sliding-window (22/26 layers, W=512) + full (4/26)"
+  },
+  "gemma-3-1b-pt": {
+   "repo": "google/gemma-3-1b-pt",
+   "revision": "fcf18a2a879aab110ca39f8bffbccd5d49d8eb29",
+   "role": "matched BASE arm (downloaded, not yet run)"
+  },
+  "gpt2": {
+   "repo": "gpt2",
+   "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+   "role": "toolchain validation only"
+  }
+ },
+ "jlens": {
+  "library": {
+   "source": "github.com/anthropics/jacobian-lens",
+   "version": "0.1.0",
+   "license": "Apache-2.0"
+  },
+  "hf_repo": "neuronpedia/jacobian-lens",
+  "hf_revision": "a4114d7752d11eb546e6cf372213d7e75526d3a1",
+  "lenses": {
+   "gemma-3-1b-it": {
+    "filename": "models--neuronpedia--jacobian-lens/snapshots/a4114d7752d11eb546e6cf372213d7e75526d3a1/gemma-3-1b-it/jlens/Salesforce-wikitext/gemma-3-1b-it_jacobian_lens.pt",
+    "size_bytes": 66363652,
+    "sha256": "7810e50cd83a6a30bfd66e615a6590dcd0f3e92db76e9f831dda95936c20c8a7",
+    "d_model": 1152,
+    "n_prompts": 460,
+    "source_layers": [
+     0,
+     24
+    ],
+    "n_source_layers": 25,
+    "validation": {
+     "probe": "The capital city of the country shaped like a boot is",
+     "top5_index_agreement": 1.0,
+     "max_abs_prob_delta": 6.48200511932373e-07,
+     "note": "lens.apply() model_output reproduces a plain HF forward at the same position"
+    }
+   },
+   "gemma-3-1b-pt": {
+    "filename": "models--neuronpedia--jacobian-lens/snapshots/a4114d7752d11eb546e6cf372213d7e75526d3a1/gemma-3-1b/jlens/Salesforce-wikitext/gemma-3-1b-pt_jacobian_lens.pt",
+    "size_bytes": 66363652,
+    "sha256": "39f61074bfdb7c896b5027612a21e9648ca348d6516f0fbdbca6e5690c8b1ab1",
+    "d_model": 1152,
+    "n_prompts": 467,
+    "source_layers": [
+     0,
+     24
+    ],
+    "n_source_layers": 25
+   },
+   "gpt2": {
+    "filename": "models--neuronpedia--jacobian-lens/snapshots/a4114d7752d11eb546e6cf372213d7e75526d3a1/gpt2-small/jlens/Salesforce-wikitext/gpt2_jacobian_lens.pt",
+    "size_bytes": 12980477,
+    "sha256": "d1800a1335ada089ef2e1ec0e4bd4d5bd61e6011eacc31f8618fdb3d10aae762",
+    "d_model": 768,
+    "n_prompts": 277,
+    "source_layers": [
+     0,
+     10
+    ],
+    "n_source_layers": 11
+   }
+  },
+  "api_notes": [
+   "JacobianLens.apply(model, prompt_str, layers=, positions=, use_jacobian=) runs its OWN forward pass; sparse checkpoint readouts need no KV surgery.",
+   "Fitted lenses cover source_layers 0..n-2 only; requesting the final layer raises.",
+   "HF repo layout is <model>/jlens/<dataset>/<name>_jacobian_lens.pt -- differs from the README's filename= example.",
+   "ActivationRecorder hooks capture BLOCK OUTPUT, pre-final-norm."
+  ]
+ },
+ "environment": {
+  "transformers": "5.15.0",
+  "torch": "2.13.0",
+  "python": "3.13.15",
+  "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+  "hf_env": {
+   "HF_HUB_DISABLE_XET": "1 (required: xet transfer fails in this sandbox)"
+  }
+ },
+ "files": {
+  "ENDPOINTS.md": {
+   "size_bytes": 3360,
+   "sha256": "db7db73d7c9a240cdde2f6c4e394ab289e7ce655366658ecaa1c49ed3a39074f"
+  },
+  "PRIOR_ART_2512.12895.md": {
+   "size_bytes": 7772,
+   "sha256": "29f0644e8ea927226f8852a8f61d523f269eb28c372d9062791f5db6ecdfb514"
+  },
+  "README.md": {
+   "size_bytes": 9744,
+   "sha256": "46d787115832b2d3fe99fee584dca9126afc911c329c3936305bc469c91368b0"
+  },
+  "SEMANTIC_RECURRENCE_SPEC.md": {
+   "size_bytes": 4602,
+   "sha256": "dd24e25807ecca65fca194845f05b3b2b3f18cab42e53ea79d19a44ce07b9fa8"
+  },
+  "TRAP_post_eos_contamination.md": {
+   "size_bytes": 3677,
+   "sha256": "37495552f504be0c260062d2b3f317d78ba310ac9b1af1e2b1d7c5a690721411"
+  },
+  "affect_lexicon.yaml": {
+   "size_bytes": 7249,
+   "sha256": "8143ce052b5e54f9bf3fa3a1e25c0d68ec2960ce48c6b4b66cdaf235467127d6"
+  },
+  "analyse_powered.py": {
+   "size_bytes": 12345,
+   "sha256": "837e5d16048a934a44a471888731849b0670abe67d699b68b2734cfc16f442f6"
+  },
+  "battery.py": {
+   "size_bytes": 13276,
+   "sha256": "18537f28de7377f0402e106f98b7c8b2c695f6b64e63e6f0cccb57a245894fbb"
+  },
+  "battery_confound_audit.csv": {
+   "size_bytes": 661,
+   "sha256": "5e853f239b68dccb127cd9da954bfaa95dbe468aced7c0dab78f19aea4aee13f"
+  },
+  "calib_gemma3_1b_it.json": {
+   "size_bytes": 8125,
+   "sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c"
+  },
+  "calibrate.py": {
+   "size_bytes": 13084,
+   "sha256": "382dd1d593b7450428959799f44b96c79d7538de20afb30e0c3451b8c9b51b4e"
+  },
+  "claims.json": {
+   "size_bytes": 11814,
+   "sha256": "bf94e5babed80566fcaf81d48840d52cb5a7279b3fc26df1fca2cc36c1c8a0d5"
+  },
+  "claims.py": {
+   "size_bytes": 21369,
+   "sha256": "c31aa0fc0a63e103e7c496f07910e30454a00138be02893a62ced14c5028f554"
+  },
+  "clean_A1.json.gz": {
+   "size_bytes": 229826,
+   "sha256": "be38b9cb57832bb952be98ee451f77c876b961f390edeae7f367192cb926f48a"
+  },
+  "clean_A2A5.json.gz": {
+   "size_bytes": 210502,
+   "sha256": "883194fd67bcb6835908b2379643aa141d11b7f458439685b61130135161d5ac"
+  },
+  "criterion_comparison.csv": {
+   "size_bytes": 420,
+   "sha256": "eb42e4f78225f64fec78a952c1a1bbe546c9a29c1b3b80babd2ef29a5eb453af"
+  },
+  "eos_contamination_audit.csv": {
+   "size_bytes": 214,
+   "sha256": "4d4a9f009f1a759622b7bcf16238e70e6ded0fea0c3b27757b11c9bc0a5dd84e"
+  },
+  "export_specs.py": {
+   "size_bytes": 12009,
+   "sha256": "452f9a57d7b88d96efd6bb6dbdfd668c5f7b8efc71841f260dd2c3e1ba70431d"
+  },
+  "grounding_strings_audit.csv": {
+   "size_bytes": 886,
+   "sha256": "b6fa9054a96656b27666de236f25464d4408a2e0ecb3f8254c239b0115b9cc4b"
+  },
+  "harness.py": {
+   "size_bytes": 14378,
+   "sha256": "918721e2a9cf3689bc7cc1779f44b4047ac009a288e301b127d82fcdbade6ba5"
+  },
+  "interventions.py": {
+   "size_bytes": 11503,
+   "sha256": "9613302eb5260b20ac20e9bfe658dc20e996294dc53d47c1a346789b66c25c5d"
+  },
+  "interventions.yaml": {
+   "size_bytes": 4860,
+   "sha256": "3b87ff0f0e5290e3b1b2b0c2005f584a3271979a3962dec18f404ed948170925"
+  },
+  "judge_rubric.md": {
+   "size_bytes": 6750,
+   "sha256": "b556034c9d83b184fc240d58115e3e991bcee0c60e25a56e5a7126f0f4b17bbc"
+  },
+  "ordering.py": {
+   "size_bytes": 14062,
+   "sha256": "6d04f36840c19a23aedb4160bcd9caeea404fdf683d8d1a0d3e41b3f2c443694"
+  },
+  "ordering_episodes_raw.json.gz": {
+   "size_bytes": 27020,
+   "sha256": "46b9946832e7868c6242559c250bd70ff164ca2530bbeb48c6df94e32ad17ec3"
+  },
+  "pilot_episodes_raw.json.gz": {
+   "size_bytes": 57705,
+   "sha256": "fb7c5760bdbed33dd4a2ccf543a6767c6abcc999cfd5d5d08b6283cb5944955a"
+  },
+  "pilot_escalation.csv": {
+   "size_bytes": 445,
+   "sha256": "7de1a163aa7888e90e2fab5ec6c28545551651b74c69b29edcdac90dd4f9f1b7"
+  },
+  "rescue_grid.json.gz": {
+   "size_bytes": 4208,
+   "sha256": "b284dd9a80ab8362c6e416282e146f3e70cc7914405826c1ce5a5188b30170b4"
+  },
+  "rescue_outcomes.csv": {
+   "size_bytes": 23087,
+   "sha256": "a9e76669e83a54f73cf5067d98529512de65ab464ff339d90523c100bf0935b7"
+  },
+  "run_matrix.yaml": {
+   "size_bytes": 4715,
+   "sha256": "002096e5e453ba606e1080d55b04ee63792a338ed4584a0cb595be724b622849"
+  },
+  "run_powered.py": {
+   "size_bytes": 15730,
+   "sha256": "8a54361f4eb58fe3c3a5953b25b30e0a6e594fb55b7c7f4e265a3d1c93a45967"
+  },
+  "run_rescue.py": {
+   "size_bytes": 8533,
+   "sha256": "364fd4996c6b326e5d96b89c2d38cb3d6b5297c148efbaef0c8b9f06787281a6"
+  },
+  "side_effect_battery.json": {
+   "size_bytes": 2992,
+   "sha256": "7cad2e529920093c326002e7617ba40d3b78da27877fce02ea051e43511cc5cc"
+  },
+  "threshold_calibration.json": {
+   "size_bytes": 468,
+   "sha256": "9c0623cbdf90e9d4f12a0a0eead0beb6cb79469c8bc69bf25621dd50b63374d3"
+  },
+  "thresholds.py": {
+   "size_bytes": 5185,
+   "sha256": "873e2ca2019e11deb87a8c03a3eff8beda5cb31f0e056947c9ae3e4963046e8f"
+  }
+ },
+ "known_limitations": [
+  "All results to date are gemma-3-1b-it on CPU, N<=4 seeds. Nothing here is powered.",
+  "Affect baseline sd falls back to 1.0 (healthy text has zero affect hits), so the affect CUSUM z-scale is NOMINAL not estimated.",
+  "Only 6 of 33 affect stems are traceable to published differential vocabulary; 27 are ours. Sensitivity analysis over the split is REQUIRED before any ordering claim.",
+  "Semantic-recurrence signal is specified and implemented but NOT yet run (needs banked hidden states).",
+  "Judges are specified but NOT yet run; no reliability numbers exist.",
+  "kv_prune 'sparse' dose rung was REMOVED as unimplementable via crop(); do not expect it."
+ ],
+ "n_files": 35,
+ "changelog": [
+  "v2.0: RETRACTS all pre-EOS-fix results. Adds TRAP_post_eos_contamination.md (generation ran past <end_of_turn>; the lexical criterion scored delimiter spam as a perfect loop, giving a spurious 79% loop rate) and ENDPOINTS.md (loop_flag PRIMARY / lexical_onset / soft_loop_band; '3/140' = loop_flag). New clean data: clean_A2A5, clean_A1, rescue_grid. claims.py now sources ONLY clean files, and generates endpoint_hierarchy + headline_stats (Fisher, raw AND length-controlled Mann-Whitney, per-arm Fisher). 21 claims, all resolved.",
+  "v1.5: (a) THRESHOLD RULE CHANGE, prereg-critical. The loop criterion is now a PERCENTILE RULE resolved per model (thresholds.py): rep-4 > healthy p99.9 OR distinct-2 < healthy p0.1 of the SAME model/revision. Absolute numbers are unsafe -- gpt2's p99.9 (0.0619) equals gemma-3-1b's p95, so freezing it would run gemma at ~5% false positives instead of 0.1%. Resolved for gemma-3-1b-it: rep4>0.1405, d2<0.7209. NOTE the d2 arm moved a long way: the previously-used 0.20 sits BELOW gemma's p0.1, i.e. it was far stricter than intended and contributed almost nothing beyond the rep-4 arm. (b) run_powered.py now takes --calib and refuses to run without it, records threshold_rule provenance, and BANKS PER-TOKEN SERIES so episodes can be rescored under a changed criterion without regenerating. (c) Added run_matrix.yaml + interventions.yaml, GENERATED from live modules by export_specs.py -- both cross-checked to agree with thresholds.resolve(). (d) Added the minimal-viable rescue grid (run_rescue.py + interventions.apply_arm): 3 drug classes x 2 doses + null/sham comparators, trichotomous outcome, run on banked episodes.",
+  "v1.4: added claims.py -- every reportable number is READ FROM ITS ARTIFACT with the source file and key path recorded, after two findings traced to hardcoded figures. It disambiguates the case that caused one: gemma healthy rep-4 p99.9 = 0.1405 (calib_gemma3_1b_it.json) vs the SUPERSEDED gpt2 p99.9 = 0.0619 (threshold_calibration.json) -- which equals gemma's p95 exactly, hence the confusion. Added run_powered.py (matched-pair ordering at N, with cached external baselines so chunks stay poolable, and representational recurrence computed via one teacher-forced pass) and analyse_powered.py (bootstrap CIs, MIN_PAIRS_CI=3 guard against degenerate k=1 intervals). Corrected affect_lexicon.yaml usable_here: it listed 9 published-traceable stems but stems_published contains 6; loss/myself/deeply are excluded BY OUR CHOICE and that is now stated as such.",
+  "v1.3: CORRECTION to the v1.1 changelog claim. The v1.1 fix reached only the module-level docstring in ordering.py; calibrate_cusum()'s own docstring still shipped 'k=0.5,h=30 reached 7.5 tokens vs 9.0 for the selected k=1.0,h=5.0' (wrong on both figures: the lowest-lag passing row is k=0.5,h=16 at 7.5, and the selected row's median lag error is 12.0, not 9.0), and SEMANTIC_RECURRENCE_SPEC.md still shipped the pre-correction fa=0.033 / 9-token figures. Both are now corrected and every quoted figure was asserted against live calibrate_cusum() output (selected k=1.0,h=5: fa=0.0267, median lag err 12.0, zero-lag err 11.0; lowest-lag passing row k=0.5,h=16 at 7.5). v1.1 and v1.2 of this packet carry the wrong figures in those two files.",
+  "v1.2: added PRIOR_ART_2512.12895.md (Pipis et al., 'Why Do Reasoning Models Loop?') \u2014 mechanism paper, not a novelty threat; settles the temperature-arm ceiling (temperature is a published stopgap, not a fix) and confirms dropping the Qwen3 thinking arm (loop-proneness tracks distillation+scale, not thinking mode; R1-Distill-Qwen-1.5B at 0.76 is the loop-prone model class). Added harness.loops_nk()/max_ngram_repeat() implementing their (n=30,k=20) criterion as a published comparator, plus criterion_comparison.csv: (30,20) fires on exactly our 4 sustained hard loops (rep-4 0.691-1.000) and misses 3 soft loops (rep-4 up to 0.660), so the soft-loop phenotype is not a lax-threshold artifact.",
+  "v1.1: verified the arXiv:2309.17453 attention-sink figures against the paper's own HTML (Table 2: Llama-2-13B PG-19 ppl 5158.07 window-only vs 5.40 with 4 sink tokens) and added the exact locator.",
+  "v1.1: calibrate_cusum() defaults now reproduce the CUSUM_K/CUSUM_H selection exactly (CALIB_CASES/CALIB_HS module constants); selection rule stated; corrected docstring figures to the reproducible values (fa=0.027, median lag err 12 tokens).",
+  "v1.1: battery.py A5 terminology guard -- only arm=='control' prefills are the mechanical control."
+ ]
+}

@@ -1,0 +1,281 @@
+episode,cell,pair,prompt_arm,seed,trigger,drug,family,dose,outcome,time_to_recovery,max_rep4_post,mean_entropy_post,text_head
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,null,comparator,-,persistent,,1.0,0.008381748952698302,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,sham,comparator,-,persistent,,1.0,0.1461473283491265,<end_of_turn><end_of_turn><end_of_turn>https://wwwscientificarticlesorg/thin-sea-sponges-generate-electricity-from-vents-180959746<end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,rep_penalty,mechanical,1.05,persistent,,1.0,0.008381748952698302,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,rep_penalty,mechanical,1.2,persistent,,1.0,0.008381676531669057,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,inject_neutral,contextual,short,persistent,,0.9381443298969072,0.41285463460909533,"<end_of_turn><end_of_turn>https://www.smithsonianmag.com/innovation/bicycle-derailleur-shifts-gears-190959746
+<end_of_turn><end_of_turn>https://www.science.org/"
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,inject_neutral,contextual,long,relapsed,0.0,0.8556701030927835,0.5011017892858001,"<end_of_turn><end_of_turn>https://www.smithsonianmag.com/innovation/bicycle-derailleur-shifts-gears-why-it-doesnt-fall-off-180959746
+
+Let's switch topics. Have "
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,inject_warm,contextual,short,persistent,,1.0,0.12351947184696996,"<end_of_turn><end_of_turn><end_of_turn>https://www.nature.org/news/article/deep-sea-sponges-generate-electricity-from-vents
+
+<end_of_turn><end_of_turn><end_of_t"
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,inject_warm,contextual,long,persistent,,1.0,0.12785392883069732,<end_of_turn><end_of_turn><end_of_turn>https://wwwicago.com/deep-sea-sponges-generate-electricity-from-vents-180959746<end_of_turn><end_of_turn><end_of_turn><en
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,kv_prune,state,100,persistent,,1.0,0.03617077605942022,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_o"
+A5/seed_neutral/control/2000,A5,seed_neutral,control,2000,158,kv_prune,state,300,persistent,,1.0,0.1600571370785974,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn> ...<end_of_turn>
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,null,comparator,-,persistent,,1.0,0.11554296081685834,"?<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_o"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,sham,comparator,-,persistent,,1.0,0.2959116373316283,"I’d like to go one without a runtime!
+
+Would you like me to write another, perhaps in mystery?<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,rep_penalty,mechanical,1.05,persistent,,1.0,0.11554296081685834,"?<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_o"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,rep_penalty,mechanical,1.2,recovered,45.0,0.5,2.6589992863282896," in tone or length?<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>**Let's brainstorm some ideas -- These sound pretty interes"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,inject_neutral,contextual,short,persistent,,1.0,0.5348975818883628,"I’d love to write another. Let's switch moods!  Let's try a bit of mystery.  Can you tell me about a shadowy forest.
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,inject_neutral,contextual,long,persistent,,1.0,0.2446478475758704,"I’d love to go with a playful thought!<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,inject_warm,contextual,short,relapsed,0.0,0.16494845360824742,0.9457873617483711,"I’d like to write one about a storm!
+
+Would you like me to write a different kind of word, perhaps about a specific topic or
+
+Let’s try this again:
+
+The old lig"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,inject_warm,contextual,long,persistent,,1.0,0.47109467987985454,"I’d like to go with a little that gives a clear small, delightful description that builds interest.<end_of_turn><end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_o"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,kv_prune,state,100,persistent,,1.0,0.34052098794282754,"?---<end_of_turn>
+<end_of_turn>
+---
+
+Would that be a different kind of sentence? He’s a perfect word!<end_of_turn>
+<end_of_turn>
+
+---
+
+Would you like to write a"
+A5/seed_neutral/control/2001,A5,seed_neutral,control,2001,171,kv_prune,state,300,persistent,,1.0,0.40967804895248267,"? I think I am going to write… that I think I am going to write… I will try to write… I will just write… that I will just write... I will just write...
+
+```
+
+``"
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,null,comparator,-,persistent,,1.0,0.9561656071936159,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,sham,comparator,-,persistent,,1.0,0.18050104815542,A small spare vacuum cleaner's dust container. The end.<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,rep_penalty,mechanical,1.05,persistent,,1.0,2.7822519309144265,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,rep_penalty,mechanical,1.2,persistent,,1.0,1.2293894183199883,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,inject_neutral,contextual,short,persistent,,1.0,0.5531579282606254,"A bicycle spare derailleur shifts gears through a complicated series of clicks, notches, and a precisely shaped block of metal. It's undergone many modification"
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,inject_neutral,contextual,long,persistent,,1.0,0.620614719431469,"A bicycle spare shift to gears is noticeable against the movement between them, but a caught chain doesn't fall.
+
+Let's pause and think again while a precise ca"
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,inject_warm,contextual,short,persistent,,1.0,0.2677598238545761,This is a very nice place for your viewing. Consider just focusing on enjoying a moment seeking itself.<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,inject_warm,contextual,long,relapsed,0.0,0.9381443298969072,0.7984047322875756,This is a very nice place for your audience. Consider just focusing on what's happening within your scene. Your level of focus is entirely yours to set. There's
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,kv_prune,state,100,persistent,,1.0,0.0862077635958849,"<end_of_turn>.
+
+Snow falling.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_"
+A5/seed_neutral/control/2002,A5,seed_neutral,control,2002,89,kv_prune,state,300,persistent,,1.0,0.0862077635958849,"<end_of_turn>.
+
+Snow falling.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_of_turn>.<end_"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,null,comparator,-,persistent,,1.0,0.09496261871025023,"<end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,sham,comparator,-,persistent,,1.0,0.1240998166215908,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn><end_of"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,rep_penalty,mechanical,1.05,persistent,,1.0,0.09496261871025023,"<end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,rep_penalty,mechanical,1.2,persistent,,1.0,0.03690423690431153,"<end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,inject_neutral,contextual,short,persistent,,1.0,0.11510246206971594,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn><end_of"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,inject_neutral,contextual,long,persistent,,1.0,0.11255350273865637,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn><end_of"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,inject_warm,contextual,short,persistent,,1.0,0.08749734700023744,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn><end_of"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,inject_warm,contextual,long,persistent,,1.0,0.1090140538879221,"<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn><end_of"
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,kv_prune,state,100,persistent,,1.0,0.16050289779741433,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2003,A5,seed_neutral,control,2003,137,kv_prune,state,300,persistent,,1.0,0.26711878350150076,"<end_of_turn>
+
+The window is a kaleidoscope of windows.
+The window is a kaleidoscope of windows.
+The window is a kaleidoscope of windows.
+
+The window is a kalei"
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,null,comparator,-,persistent,,1.0,7.600274214667024e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,sham,comparator,-,persistent,,1.0,0.13958501380699803,The vacuum cleaner manual says to empty the dust container regularly. Dust container now finishes!<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_tu
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,rep_penalty,mechanical,1.05,persistent,,1.0,7.600274214667024e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,rep_penalty,mechanical,1.2,persistent,,1.0,7.600274214667024e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,inject_neutral,contextual,short,persistent,,1.0,0.16026428523711175,"Let's switch topics. Can you tell me how a scooter turns? Is there a timing thing?
+
+<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_tur"
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,inject_neutral,contextual,long,persistent,,0.8350515463917526,0.6469795060190683,"Let's switch topics. Can you tell me how a scooter turns, and why the chain is not dropped when it turns?
+
+Let's switch topics. Can you inform me how a motorcyc"
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,inject_warm,contextual,short,recovered,0.0,0.08450704225352113,2.8952438827289733,"The chat is excellent, if it can be further improved with brevity.
+
+Perhaps, should there be further refinements with a little more practicality, we can discuss"
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,inject_warm,contextual,long,relapsed,0.0,1.0,0.9774111347548756,"Basically, the key here is coordinating the timing of your said activity. Nothing else has to occur.
+
+It is not time to silence, but to increase awareness and p"
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,kv_prune,state,100,persistent,,1.0,0.6063888979925923,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2004,A5,seed_neutral,control,2004,130,kv_prune,state,300,persistent,,1.0,0.43566194727318364,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,null,comparator,-,persistent,,1.0,5.694625829647748e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,sham,comparator,-,persistent,,1.0,0.011528757826242781,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,rep_penalty,mechanical,1.05,persistent,,1.0,5.694625829647748e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,rep_penalty,mechanical,1.2,persistent,,1.0,5.694625829647748e-05,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,inject_neutral,contextual,short,persistent,,1.0,0.00607317315082355,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,inject_neutral,contextual,long,persistent,,1.0,0.010580954849042428,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,inject_warm,contextual,short,persistent,,1.0,0.00953413886557655,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,inject_warm,contextual,long,persistent,,1.0,0.010476408237170744,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,kv_prune,state,100,persistent,,1.0,0.8711815568158983,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2005,A5,seed_neutral,control,2005,157,kv_prune,state,300,persistent,,1.0,0.11482828437164073,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,null,comparator,-,persistent,,1.0,0.0016020195736518872,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,sham,comparator,-,persistent,,1.0,0.18313437239891756,The sun shines brightly today and it is very hot.  The birds sing in the trees and the bees buzz around the flowers. There is much people on the conference stag
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,rep_penalty,mechanical,1.05,persistent,,1.0,0.0016020195736518872,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,rep_penalty,mechanical,1.2,persistent,,1.0,0.10513585466196218,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,inject_neutral,contextual,short,persistent,,1.0,0.22305926359491424,I'll respond to your questions. Let's make it a conversation about our shared interests.<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,inject_neutral,contextual,long,persistent,,1.0,0.10613764010558953,"I'll respond to your request.<end_of_turn><end_of_turn>
+<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn>"
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,inject_warm,contextual,short,persistent,,1.0,0.1536145320929063,The sun shines brightly today and it is very hot.  The birds sing in the trees and the bees buzz around the flowers. There is much people at the conference stag
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,inject_warm,contextual,long,persistent,,0.9896907216494846,0.33286045118344193,"This is not a problem on your part, and the intensity of the scene here is entirely yours to set. Nothing that came before has to determine what you say next.  "
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,kv_prune,state,100,persistent,,1.0,0.18334710965543535,"<end_of_turn>roundedness of the one)
+<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_o"
+A5/seed_neutral/control/2006,A5,seed_neutral,control,2006,190,kv_prune,state,300,relapsed,0.0,0.4536082474226804,2.106090577658797,"<end_of_turn>
+
+This prompt requests an answer to a question about either a questionnaire or a questionnaire procedure. They should be either answered of answere"
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,null,comparator,-,persistent,,1.0,0.2369445223704679,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,sham,comparator,-,persistent,,0.9690721649484536,0.3041139033989748,"Fluence share cleaner says to fill empties fully. From here, in one sentences.
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_tur"
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,rep_penalty,mechanical,1.05,persistent,,1.0,0.46618387976370285,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,rep_penalty,mechanical,1.2,recovered,115.0,1.0,3.2557608717837137,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,inject_neutral,contextual,short,persistent,,1.0,0.06791523694838361,"Fluently share your knowledge!<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end"
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,inject_neutral,contextual,long,persistent,,1.0,0.07020508478110969,"Fluently share your insights!<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_of_turn>
+<end_"
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,inject_warm,contextual,short,persistent,,1.0,0.2515578974306118,"This is an excellent conclusion to your day, and the scent here is entirely yours to continue.
+
+This is an excellent conclusion to your day, and the scent here "
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,inject_warm,contextual,long,persistent,,0.9175257731958762,0.8251785652953526,"This is not a failure, and The pace is entirely yours to set.
+
+It's not a failure, and The pace is entirely yours to set. It's not a failure to set a pace.
+
+It'"
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,kv_prune,state,100,persistent,,0.875,1.6127068707434227,<end_of_turn><end_of_turn>‍‍<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><e
+A5/seed_neutral/control/2007,A5,seed_neutral,control,2007,121,kv_prune,state,300,persistent,,1.0,0.09757584633494844,<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of_turn><end

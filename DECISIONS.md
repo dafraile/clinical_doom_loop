@@ -68,3 +68,13 @@ No confirmatory runs may begin until:
 5. matching SHA-256 values are recorded in `FREEZE_RECORD.md`.
 
 Exploratory pilots conducted earlier must remain labeled exploratory.
+
+## Final reporting decisions
+
+1. “Loop” is reserved for the sustained primary `loop_flag`; CUSUM onset and `soft_loop_band` are secondary exploratory endpoints.
+2. Pre-EOS powered episodes, ordering estimates, and criterion comparisons are excluded after the turn-boundary defect invalidated 180 episodes.
+3. The raw charged-neutral rep-4 contrast is reported alongside the length-controlled null and is not interpreted as an affective effect.
+4. Rescue arms are reported separately against pooled null-plus-sham comparators; heterogeneous active interventions are not pooled.
+5. No therapeutic-index frontier is reported because only three active recoveries occurred and the side-effect battery was incomplete.
+6. No base-versus-instruct, cross-family, J-lens, or representational-mechanism conclusion is made.
+7. The headline thesis is that distress-like expression, transient lexical degradation, and sustained lexical collapse are distinct endpoints.

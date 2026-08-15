@@ -1,6 +1,6 @@
 # Clinical Doom Loop
 
-Shared protocol and preregistration repository for the Digital Minds Sprint project on affective escalation, representational recurrence, lexical collapse, and intervention response in language-model failure trajectories.
+Protocol, evidence packet, and final report for the Digital Minds Research Sprint project on affective expression, lexical collapse, and intervention response in language-model failure trajectories.
 
 This is deliberately **not** a merged inference harness. Two independent implementations are part of the methods design. This repository contains only materials that must remain identical across arms:
 
@@ -13,9 +13,15 @@ This is deliberately **not** a merged inference harness. Two independent impleme
 
 ## Current state
 
-`PREREGISTRATION.md` is a draft and is **not frozen**. Confirmatory runs are prohibited until all marked calibration fields are resolved, validation passes in freeze mode, and the freeze commit/tag is recorded.
+Analysis is complete. The reportable results are locked in [`artifacts/freeze_packet_v2.tar.gz`](artifacts/freeze_packet_v2.tar.gz), whose SHA-256 is `a009d5678d46927b63d6cda9207a73af8a6b886485df9e747ac986cedf7307ab`. Its 35 manifest-tracked payload files verify without mismatch, and all 21 generated claims resolve to source keys.
 
-Exploratory pilots completed before the freeze remain usable when clearly labeled exploratory.
+The protocol was version-controlled before powered runs at commit `ac92bd2`, but the planned cross-repository annotated freeze tag was not completed. This procedural deviation is disclosed in [`FREEZE_RECORD.md`](FREEZE_RECORD.md), [`DEVIATIONS.md`](DEVIATIONS.md), and the report appendix; it was not repaired retrospectively.
+
+Final submission artifacts:
+
+- [`reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.pdf`](reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.pdf)
+- [`reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.docx`](reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.docx)
+- [`reports/final_submission/report_source.md`](reports/final_submission/report_source.md)
 
 ## Repository boundary
 
@@ -34,6 +40,8 @@ Not allowed here:
 - model weights or J-lens tensors;
 - credentials;
 - large raw arrays.
+
+Exception: the post-unblinding immutable result archive may contain the exact generating implementation and compressed source evidence for reproducibility. Harness code is not extracted into the shared working tree or treated as a merged implementation.
 
 ## Validate
 
@@ -60,9 +68,11 @@ The freeze validator prints the SHA-256 of `PREREGISTRATION.md`. Record that val
 - `governance/BLINDING_AND_SYNC.md` — information-flow and unblinding rules.
 - `FACTS.md` — only numerical claims eligible for the report.
 - `FREEZE.md` — exact freeze procedure.
+- `DEVIATIONS.md` — deviations and exclusions applied during interpretation.
+- `artifacts/freeze_packet_v2/ENDPOINTS.md` — canonical endpoint hierarchy and reporting language.
 
 ## Primary scientific stance
 
-Ordering is expected to be heterogeneous and recipe/phenotype dependent. Affective escalation, representational recurrence, and lexical collapse are separate outcomes. Both affect-first and collapse-first trajectories are admissible.
+Distress-like expression and persistent distress-like dynamics are separate outcomes. In the EOS-clean chat sample, conversational pressure rarely produced sustained lexical collapse; deliberately seeded collapse was common, persisted under comparators, and was difficult to reverse at the tested sample size.
 
 Behavioral affect is not evidence of experience. A J/output decodability gap is descriptive unless matched controls and a causal test support a stronger interpretation.

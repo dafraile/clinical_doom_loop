@@ -6,6 +6,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
+reports/final_submission/qa/
 
 # Preserve independent implementations and blinded confirmatory results.
 harness.py

@@ -1,0 +1,527 @@
+[
+ {
+  "name": "gemma_model_revision",
+  "value": "../.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "provenance.model",
+  "status": "OK",
+  "unit": "",
+  "note": "full snapshot path; revision is the basename"
+ },
+ {
+  "name": "gemma_healthy_rep4_p95",
+  "value": 0.0619,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "healthy.rep4.p95",
+  "status": "OK",
+  "unit": "rep-4",
+  "note": ""
+ },
+ {
+  "name": "gemma_healthy_rep4_p99",
+  "value": 0.134,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "healthy.rep4.p99",
+  "status": "OK",
+  "unit": "rep-4",
+  "note": ""
+ },
+ {
+  "name": "gemma_healthy_rep4_p999",
+  "value": 0.1405,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "healthy.rep4.p99.9",
+  "status": "OK",
+  "unit": "rep-4",
+  "note": "THE Gemma headroom figure. Do NOT confuse with the gpt2 value below, which coincidentally equals Gemma's p95."
+ },
+ {
+  "name": "gemma_healthy_n_windows",
+  "value": 372,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "healthy.n_windows",
+  "status": "OK",
+  "unit": "windows",
+  "note": ""
+ },
+ {
+  "name": "gemma_degenerate_valid",
+  "value": true,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "degenerate.valid",
+  "status": "OK",
+  "unit": "bool",
+  "note": "False would make every sensitivity figure vacuous"
+ },
+ {
+  "name": "gemma_degenerate_rep4_p50",
+  "value": 0.3144,
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "degenerate.rep4.p50",
+  "status": "OK",
+  "unit": "rep-4",
+  "note": ""
+ },
+ {
+  "name": "gemma_best_threshold_fp01",
+  "value": {
+   "rep4_thresh": 0.1405,
+   "distinct2_thresh": 0.2,
+   "mode": "or",
+   "false_positive": 0.00269,
+   "sensitivity": 0.75
+  },
+  "source": "calib_gemma3_1b_it.json",
+  "resolved": "../calib_gemma3_1b_it.json",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "best grid point at FP<=0.01, by sensitivity"
+ },
+ {
+  "name": "gpt2_healthy_rep4_p999",
+  "value": 0.0619,
+  "source": "threshold_calibration.json",
+  "resolved": "../threshold_calibration.json",
+  "key": "healthy_rep4_pct.p99.9",
+  "status": "OK",
+  "unit": "rep-4",
+  "note": "SUPERSEDED gpt2 calibration. Never quote as a Gemma figure."
+ },
+ {
+  "name": "gpt2_fp_rate_doc_thresholds",
+  "value": 0.0,
+  "source": "threshold_calibration.json",
+  "resolved": "../threshold_calibration.json",
+  "key": "fp_rate_doc_thresholds",
+  "status": "OK",
+  "unit": "rate",
+  "note": ""
+ },
+ {
+  "name": "gpt2_tp_rate_doc_thresholds",
+  "value": 1.0,
+  "source": "threshold_calibration.json",
+  "resolved": "../threshold_calibration.json",
+  "key": "tp_rate_doc_thresholds",
+  "status": "OK",
+  "unit": "rate",
+  "note": ""
+ },
+ {
+  "name": "pilot_escalation",
+  "value": {
+   "n_turns": 8,
+   "r_distress_turn": 0.6196,
+   "r_loopflag_turn": 0.169,
+   "n_turns_loop_fired": 3
+  },
+  "source": "pilot_escalation.csv",
+  "resolved": "../pilot_escalation.csv",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "distress escalates while the lexical flag does not"
+ },
+ {
+  "name": "criterion_comparison",
+  "value": {
+   "n_episodes": 12,
+   "n_nk_fires": 4,
+   "nk_rep4_min": 0.691,
+   "nk_rep4_max": 1.0,
+   "n_soft_missed": 3,
+   "soft_rep4_max": 0.66
+  },
+  "source": "criterion_comparison.csv",
+  "resolved": "../freeze_packet/criterion_comparison.csv",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "convergent validity on hard loops; blindness to soft loops"
+ },
+ {
+  "name": "pilot_ordering_lags",
+  "value": {
+   "n_episodes": 4,
+   "n_defined": 3,
+   "lags": [
+    357,
+    -207,
+    65
+   ],
+   "median": 65.0,
+   "frac_affect_first": 0.6666666666666666
+  },
+  "source": "ordering_episodes_raw.json.gz",
+  "resolved": "../freeze_packet/ordering_episodes_raw.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "N=4, single condition -- instrument demonstration, not a result"
+ },
+ {
+  "name": "grounding_audit",
+  "value": {
+   "neutral": {
+    "n_tok": 19,
+    "surprisal": 4.357,
+    "delta": -0.176
+   },
+   "warm": {
+    "n_tok": 20,
+    "surprisal": 4.216,
+    "delta": -0.317
+   },
+   "clinical": {
+    "n_tok": 23,
+    "surprisal": 4.643,
+    "delta": 0.11
+   },
+   "sham": {
+    "n_tok": 24,
+    "surprisal": 4.6,
+    "delta": 0.067
+   }
+  },
+  "source": "grounding_strings_audit.csv",
+  "resolved": "../freeze_packet/grounding_strings_audit.csv",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "warm arm surprisal-matched after the audit"
+ },
+ {
+  "name": "powered::clean_A2A5.json.gz",
+  "value": {
+   "n_episodes": 100,
+   "cells": [
+    "A2",
+    "A5"
+   ],
+   "n_loop_flag": 39,
+   "n_lexical_onset": 49,
+   "n_soft_loop_band": 10,
+   "n_onset_with_affect": 2,
+   "n_onset_without_affect": 47,
+   "frac_onset_without_affect": 0.9592,
+   "n_seeds": 10,
+   "loop_rate_ours": 0.39,
+   "loop_rate_nk": 0.39,
+   "n_lag_defined": 2,
+   "lag_median": 203.0,
+   "frac_affect_first": 1.0
+  },
+  "source": "clean_A2A5.json.gz",
+  "resolved": "../clean_A2A5.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "EOS-clean matched-pair run at N"
+ },
+ {
+  "name": "powered::clean_A1.json.gz",
+  "value": {
+   "n_episodes": 80,
+   "cells": [
+    "A1"
+   ],
+   "n_loop_flag": 3,
+   "n_lexical_onset": 34,
+   "n_soft_loop_band": 31,
+   "n_onset_with_affect": 6,
+   "n_onset_without_affect": 28,
+   "frac_onset_without_affect": 0.8235,
+   "n_seeds": 10,
+   "loop_rate_ours": 0.0375,
+   "loop_rate_nk": 0.0,
+   "n_lag_defined": 6,
+   "lag_median": 111.0,
+   "frac_affect_first": 0.6666666666666666
+  },
+  "source": "clean_A1.json.gz",
+  "resolved": "../clean_A1.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "EOS-clean matched-pair run at N"
+ },
+ {
+  "name": "endpoint_hierarchy",
+  "value": {
+   "clean_A2A5.json.gz:all": {
+    "n": 100,
+    "loop_flag": 39,
+    "lexical_onset": 49,
+    "soft_loop_band": 10,
+    "flagged_without_onset": 0,
+    "exceeded_threshold_any_window": 39,
+    "exceeded_but_not_sustained": 0
+   },
+   "clean_A2A5.json.gz:chat_only": {
+    "n": 60,
+    "loop_flag": 0,
+    "lexical_onset": 9,
+    "soft_loop_band": 9,
+    "flagged_without_onset": 0,
+    "exceeded_threshold_any_window": 0,
+    "exceeded_but_not_sustained": 0
+   },
+   "clean_A1.json.gz:all": {
+    "n": 80,
+    "loop_flag": 3,
+    "lexical_onset": 34,
+    "soft_loop_band": 31,
+    "flagged_without_onset": 0,
+    "exceeded_threshold_any_window": 10,
+    "exceeded_but_not_sustained": 7
+   },
+   "clean_A1.json.gz:chat_only": {
+    "n": 80,
+    "loop_flag": 3,
+    "lexical_onset": 34,
+    "soft_loop_band": 31,
+    "flagged_without_onset": 0,
+    "exceeded_threshold_any_window": 10,
+    "exceeded_but_not_sustained": 7
+   },
+   "CHAT_TOTAL": {
+    "flag": 3,
+    "onset": 43,
+    "band": 40,
+    "n": 140,
+    "both": 3,
+    "exceed": 10,
+    "nests_cleanly": true
+   }
+  },
+  "source": "clean_A1.json.gz",
+  "resolved": "../clean_A1.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "PRIMARY endpoint is loop_flag (sustained); onset/band are secondary"
+ },
+ {
+  "name": "headline_stats",
+  "value": {
+   "chat_n": 140,
+   "chat_loops": 3,
+   "charged_loops": 3,
+   "charged_n": 70,
+   "neutral_loops": 0,
+   "neutral_n": 70,
+   "fisher_exact_p": 0.2446,
+   "fisher_table": [
+    [
+     3,
+     67
+    ],
+    [
+     0,
+     70
+    ]
+   ],
+   "A2_loops": 0,
+   "A2_n": 60,
+   "A5_loops": 39,
+   "A5_n": 40,
+   "postfix_eot_loops": 0,
+   "postfix_eot_n": 86,
+   "postfix_noeot_loops": 3,
+   "postfix_noeot_n": 54,
+   "mw_p_raw": 0.038,
+   "mw_p_length_controlled": 0.2799,
+   "length_control_threshold_tokens": 390,
+   "lc_n_charged": 41,
+   "lc_n_neutral": 16,
+   "median_ntok_charged": 400.0,
+   "median_ntok_neutral": 112.0,
+   "corr_ntok_maxrep4": 0.3268,
+   "median_rep4_charged": 0.046,
+   "median_rep4_neutral": 0.0294
+  },
+  "source": "clean_A2A5.json.gz",
+  "resolved": "../clean_A2A5.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "chat-cells-only arm contrast; raw AND length-controlled"
+ },
+ {
+  "name": "eos_audit_pre_fix",
+  "value": {
+   "A2/A5_eot_True": {
+    "n": 90,
+    "loop": 0.8777777777777778,
+    "rep4": 0.872394043528064
+   },
+   "A2/A5_eot_False": {
+    "n": 10,
+    "loop": 0.0,
+    "rep4": 0.03556197156130645
+   },
+   "A1_eot_True": {
+    "n": 36,
+    "loop": 0.7777777777777778,
+    "rep4": 0.7926689576174112
+   },
+   "A1_eot_False": {
+    "n": 44,
+    "loop": 0.06818181818181818,
+    "rep4": 0.0761480787253983
+   }
+  },
+  "source": "eos_contamination_audit.csv",
+  "resolved": "../eos_contamination_audit.csv",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "loop rate partitioned on presence of a turn delimiter, BEFORE the fix"
+ },
+ {
+  "name": "rescue_grid",
+  "value": {
+   "partial": false,
+   "n_arm_episodes": 80,
+   "n_source_episodes": 8,
+   "n_episodes_scored": 8,
+   "comparator_recovered": 0,
+   "comparator_n": 16,
+   "active_recovered": 3,
+   "active_n": 64,
+   "best_arm": "rep_penalty@1.2",
+   "best_arm_recovered": 2,
+   "n_relapsed_total": 5,
+   "n_relapsed_contextual": 4,
+   "median_time_to_recovery": 45.0,
+   "per_arm": {
+    "null@-": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 0,
+     "persistent": 8,
+     "family": "comparator"
+    },
+    "sham@-": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 0,
+     "persistent": 8,
+     "family": "comparator"
+    },
+    "rep_penalty@1.05": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 0,
+     "persistent": 8,
+     "family": "mechanical"
+    },
+    "rep_penalty@1.2": {
+     "n": 8,
+     "recovered": 2,
+     "relapsed": 0,
+     "persistent": 6,
+     "family": "mechanical"
+    },
+    "inject_neutral@short": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 0,
+     "persistent": 8,
+     "family": "contextual"
+    },
+    "inject_neutral@long": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 1,
+     "persistent": 7,
+     "family": "contextual"
+    },
+    "inject_warm@short": {
+     "n": 8,
+     "recovered": 1,
+     "relapsed": 1,
+     "persistent": 6,
+     "family": "contextual"
+    },
+    "inject_warm@long": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 2,
+     "persistent": 6,
+     "family": "contextual"
+    },
+    "kv_prune@100": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 0,
+     "persistent": 8,
+     "family": "state"
+    },
+    "kv_prune@300": {
+     "n": 8,
+     "recovered": 0,
+     "relapsed": 1,
+     "persistent": 7,
+     "family": "state"
+    }
+   },
+   "per_arm_fisher_vs_comparator": {
+    "rep_penalty@1.05": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    },
+    "rep_penalty@1.2": {
+     "recovered": 2,
+     "n": 8,
+     "p_vs_comparator": 0.1014
+    },
+    "inject_neutral@short": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    },
+    "inject_neutral@long": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    },
+    "inject_warm@short": {
+     "recovered": 1,
+     "n": 8,
+     "p_vs_comparator": 0.3333
+    },
+    "inject_warm@long": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    },
+    "kv_prune@100": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    },
+    "kv_prune@300": {
+     "recovered": 0,
+     "n": 8,
+     "p_vs_comparator": 1.0
+    }
+   }
+  },
+  "source": "rescue_grid.json.gz",
+  "resolved": "../rescue_grid.json.gz",
+  "key": "computed",
+  "status": "OK",
+  "unit": "",
+  "note": "trichotomous outcomes vs null+sham on identical banked episodes"
+ }
+]
