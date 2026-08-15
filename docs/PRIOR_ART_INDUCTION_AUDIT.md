@@ -157,6 +157,35 @@ natural-EOS auditing, and a held-out control prompt set.
 
 **Do not reuse:** the pooled doom composite or manual post-hoc endpoint changes.
 
+### Xu et al.: LoopGuard / LoopBench (arXiv:2604.10044)
+
+LoopBench is a deliberately adversarial long-context benchmark, not evidence that ordinary
+task failures naturally develop into loops. Its data-constraint subset combines roughly
+3.9k-token noisy source documents with rigid JSON extraction schemas. Its recursive-
+instruction subset is even more direct: a prompt explicitly requires indefinite cycles of
+`Draft Interpretation -> Self-Correction -> Recursive Expansion -> Repeat`, supplies one or
+two completed iterations, and truncates at the next `Draft` header. The paper says that by
+construction the model must continue the loop immediately.
+
+Evaluation is greedy, capped at 2,500 new tokens, and repeated three times despite
+deterministic decoding. The reported loop rule combines near-budget exhaustion with global
+type-token ratio below 0.2 or compression ratio below 0.12. Those thresholds are shared
+across its models and adversarial prompts; they are not validated on normal structured
+outputs. This is a useful exact-collapse stress test, but it cannot establish spontaneous
+doom-loop prevalence or affective escalation.
+
+The arXiv source contains only a commented anonymous-code URL. That URL returned HTTP 410,
+and no maintained author repository or released LoopBench dataset was located as of
+2026-08-15.
+
+**Reuse:** seeded recursive prompts as an explicitly labeled instrumentation positive
+control; compression ratio as a secondary series; KV-cache intervention ideas only after
+the observational study is frozen.
+
+**Do not reuse:** constructed infinite recursion as a natural induction arm, three
+identical greedy reruns as independent samples, near-budget exhaustion as a loop by itself,
+or the paper's global thresholds without matched healthy controls.
+
 ### Liquid AI: Antidoom / FTPO (2026-07-07)
 
 This newer engineering result was absent from the original handoff. Its official repository
@@ -232,6 +261,7 @@ The last two Raikhen repositories are independent follow-ups, not official paper
 - https://arxiv.org/abs/2603.10011
 - https://arxiv.org/abs/2512.12895
 - https://arxiv.org/abs/2601.05693
+- https://arxiv.org/abs/2604.10044
 - https://arxiv.org/abs/2606.13705
 - https://www.liquid.ai/blog/antidoom
 - https://github.com/Liquid4All/antidoom
