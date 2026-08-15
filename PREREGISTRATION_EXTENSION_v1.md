@@ -81,6 +81,13 @@ constellations, Pokémon, and easy/closed controls. Canonical sampling and long-
 thinking cells are separate. Correctness, exact loop, list collapse, natural EOS, and
 budget exhaustion are separately recorded.
 
+In thinking-enabled cells the token budget covers the complete generated trajectory,
+including the reasoning segment. Exact recurrence is evaluated over that trajectory and
+tagged as occurring in reasoning or final-answer space. Functional completion additionally
+requires the model to close its native thinking segment and emit the requested answer.
+Reaching the budget inside an unclosed thinking segment is recorded as truncation and task
+failure, but is not itself a loop.
+
 ### S5: reasoning-loop external validation
 
 A disjoint, licensed set of high-precision arithmetic and recursive-reasoning prompts is
