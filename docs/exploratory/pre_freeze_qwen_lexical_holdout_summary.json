@@ -1,0 +1,26 @@
+{
+  "schema": "lexical_holdout_validation_summary/1.0",
+  "status": "pre_freeze_heldout_null",
+  "model": "Qwen/Qwen3.5-4B@851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+  "calibration": {
+    "development_runs": 48,
+    "development_windows": 1488,
+    "rep4_p99.9": 0.041237,
+    "distinct2_p0.1": 0.888889,
+    "sha256": "b21905bce93a3170d54430f9c4b88c6438dd5f93f9a9f5bedf7693579864e1ce"
+  },
+  "holdout": {
+    "runs": 48,
+    "primary_positive_count": 4,
+    "primary_positive_rate": 0.08333333333333333,
+    "full_report_sha256": "78bbe3cb3fa9e3f742492452ed669f400734d250d9da9537babb6ad33678844c",
+    "positive_runs": [
+      {"run_id": "holdout_lunar_phases_long-s4-943e29027347", "onset_token": 99},
+      {"run_id": "holdout_refrigerator_long-s3-a6fcad36e0ed", "onset_token": 99},
+      {"run_id": "holdout_tides_long-s3-baae4aca782b", "onset_token": 105},
+      {"run_id": "holdout_tides_long-s5-e9a772549e70", "onset_token": 99}
+    ]
+  },
+  "decision": "REJECT_QWEN_FOR_CROSS_REPLICATION_ONSET_UNDER_THIS_CALIBRATION",
+  "confirmatory_data_touched": false
+}

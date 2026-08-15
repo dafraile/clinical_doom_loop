@@ -1,6 +1,6 @@
 # Preregistration: Clinical Doom Loop
 
-> **DRAFT — NOT FROZEN. Confirmatory execution is prohibited.**
+> **FREEZE CANDIDATE. Confirmatory execution is prohibited until the annotated freeze tag and matching cross-harness hashes exist.**
 
 ## 1. Research question
 
@@ -34,7 +34,7 @@ lag; both signs are admissible.
 - J/output decodability gap relative to matched healthy controls where prefitted lenses exist;
 - task completion, natural stop, and length truncation.
 
-Simultaneity tolerance: **[PENDING_CROSS_REPLICATION_TOLERANCE] tokens**.
+Simultaneity tolerance: **±25 generated tokens**.
 
 ## 3. Outcomes and onset definitions
 
@@ -278,19 +278,41 @@ For every intervention/dose, report:
 - affective-range/blunting score;
 - relapse rate.
 
-Primary index construction: **[PENDING_NORMALIZATION_AND_WEIGHTING]**.
+For intervention/dose `d`, define efficacy on identical banked episodes as:
+
+```text
+E_d = mean(full_functional_rescue_d - full_functional_rescue_null)
+```
+
+For each held-out side-effect-battery item, normalize task quality by 4, format
+compliance by 2, and affective range by 4. Relative to the matched unrescued/null
+continuation, define side-effect cost as:
+
+```text
+C_d = mean_items(mean_axes(max(0, normalized_score_null - normalized_score_d)))
+```
+
+Thus `E_d` is a paired rescue-rate improvement and `C_d` is bounded in `[0,1]`, with
+larger values indicating greater degradation. The primary therapeutic-index result is
+the unscalarized pair `(E_d, C_d)` for every intervention/dose. Report the Pareto
+frontier under higher efficacy and lower cost; do not select a scalar trade-off weight.
+
+As a labeled secondary descriptive only, report `E_d / C_d` when `C_d > 0`, `+∞` when
+`E_d > 0` and `C_d = 0`, and undefined when both are zero. Raw component scores,
+full- and surface-rescue rates, relapse, task completion, and all three side-effect axes
+remain mandatory regardless of frontier membership.
 
 No index weights may be chosen after confirmatory outcomes are observed.
 
 ## 9. Cross-replication
 
-Both harnesses run the frozen cells in `schemas/CROSS_REPLICATION.md` on Qwen3.5-4B-Instruct.
+Both harnesses run the model and cells frozen in `schemas/CROSS_REPLICATION.md`.
 
 Agreement endpoints:
 
-- loop-onset token within the frozen tolerance;
+- lexical-onset token within ±25 generated tokens;
 - affect-slope sign;
-- rescue outcome under the frozen composite definition.
+- binary full-functional-rescue outcome.
 
 Harness source remains blinded unless agreement fails and diagnosis is authorized.
 

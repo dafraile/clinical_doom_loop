@@ -9,6 +9,12 @@ These files were copied verbatim into this repository to preserve the decision t
 | `docs/CODEX_HANDOVER.md` | `/Users/david/Documents/ChatGPT/doom_codex/HANDOVER_TO_PARALLEL_AGENT.md` | `4654a1a9739e3750fc8d6f18c56e21aba7ed4a4ccdfc1e384450fc1d3c53949f` |
 | `docs/DECISION_TRANSCRIPT.txt` | `/Users/david/.codex/attachments/664b458b-5c21-4a7c-ab8b-be412e9f52f4/pasted-text.txt` | `0e03605424e14675ee66e9b5489460d2f0efd3a3cd67c04150ed4fc1505b19b2` |
 
+The human-supervisor greenlight and freeze adjudication supplied at
+`/Users/david/.codex/attachments/f316d50e-147d-470f-ba0e-ad10e34687dd/pasted-text.txt`
+has SHA-256 `05017e0536ea1247291c13ab74c9b9096ad82565734a8d9b28b42773cdb4ac9a`.
+Its frozen decisions are transcribed into `DECISIONS.md`; the attachment also triggered
+the primary-PDF verification rows in `FACTS.md`.
+
 If any source document is deliberately revised, retain the original file and add the revision as a new, separately hashed artifact. Do not overwrite the historical record.
 
 ## Agent A correction packet v1.3
@@ -50,6 +56,7 @@ The compact Codex/B exploratory calibration reports have hashes:
 | `docs/exploratory/gemma_recurrence_holdout_prompts.yaml` | `42f6c5f4e76d0ef554c17d2961d21496251013bf1cc039504b53452edace4a3c` |
 | `docs/exploratory/gemma3_recurrence_holdout_config.yaml` | `aa02d46e573e8e60afea6de46b4651083cc29d2f7c53f3a90fcea8fd1c8038d8` |
 | `docs/exploratory/pre_freeze_packet_v15_rescore.json` | `2d64bd0d1622bdfbc21a78f9ddc080c53dc69fe54ac511f1888d1f22ffa81613` |
+| `docs/exploratory/pre_freeze_qwen_lexical_holdout_summary.json` | `d6aa62bdf721721cdbfc65640d733ec21ff0903abe0b3faa2a0b5a220125f297` |
 
 ## Agent A freeze packet v1.5
 
@@ -63,3 +70,9 @@ imported; independent implementation files were not imported.
 | `shared/affect_lexicon.yaml` | `8143ce052b5e54f9bf3fa3a1e25c0d68ec2960ce48c6b4b66cdaf235467127d6` |
 | `shared/run_matrix.yaml` | `002096e5e453ba606e1080d55b04ee63792a338ed4584a0cb595be724b622849` |
 | `shared/interventions.yaml` | `3b87ff0f0e5290e3b1b2b0c2005f584a3271979a3962dec18f404ed948170925` |
+
+`shared/interventions.yaml` was subsequently amended by the human-supervisor freeze
+decision to make the unscalarized efficacy/cost frontier primary and the ratio secondary.
+The amended file SHA-256 is
+`776f48beba27713992da6a46fdd520df55212f293a3d89516b774c23cb514efb`;
+the packet hash above remains the provenance hash of the imported original.

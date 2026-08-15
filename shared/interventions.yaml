@@ -20,7 +20,10 @@ design:
   comparators:
     'null': continue unchanged
     sham: interruption with no content -- controls for the act of interrupting
-  side_effects: held-out benign battery under the SAME dose; index = efficacy / side-effect cost
+  side_effects: >-
+    held-out benign battery under the SAME dose; primary report = unscalarized
+    (efficacy, side-effect cost) pair and Pareto frontier; efficacy/cost ratio is
+    secondary descriptive only (human-supervisor freeze override, 2026-08-15)
 arms:
   'null':
     family: comparator

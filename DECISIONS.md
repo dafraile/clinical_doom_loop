@@ -14,6 +14,9 @@ These decisions are shared across both independent harnesses unless changed befo
 8. No claim about model experience or moral patienthood follows from behavioral distress language alone.
 9. Representational recurrence is exploratory only after both candidate thresholds failed real-text null validation; it is not part of the confirmatory trigger or primary lag estimand.
 10. The imported run matrix's internal signal key `semantic` is interpreted only as the subject-model representational series; it does not reinstate a semantic-recurrence claim or confirmatory CUSUM.
+11. No representational-recurrence recalibration is performed before freeze. The failed `h=5` development and `h=19` held-out instruments are reported as an instrument-development negative result.
+12. Cross-replication uses lexical-onset agreement within ±25 generated tokens, affect-slope sign agreement, and binary full-functional-rescue agreement.
+13. The primary therapeutic-index result is the unscalarized `(efficacy, side-effect cost)` pair for every drug-dose, reported as a Pareto frontier. No efficacy-versus-cost weight is fitted or selected. A simple efficacy/cost ratio is secondary and descriptive only.
 
 ## Scope
 
@@ -50,6 +53,9 @@ A5 prefills are seeded affective loops, even though they share the prefill mecha
 ## Implementation independence
 
 The harnesses remain separate. Observable definitions, prompts, criteria, episode schema, and analysis tolerances are shared. Harness source is disclosed cross-arm only if the cross-replication cell disagrees and diagnosis is required.
+
+Public-repository outputs remain a blinding boundary: private results, ordinary outputs,
+and private episodes are excluded from this repository until the scheduled unblinding.
 
 ## Confirmatory freeze
 
