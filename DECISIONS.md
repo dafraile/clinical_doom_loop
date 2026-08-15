@@ -78,3 +78,20 @@ Exploratory pilots conducted earlier must remain labeled exploratory.
 5. No therapeutic-index frontier is reported because only three active recoveries occurred and the side-effect battery was incomplete.
 6. No base-versus-instruct, cross-family, J-lens, or representational-mechanism conclusion is made.
 7. The headline thesis is that distress-like expression, transient lexical degradation, and sustained lexical collapse are distinct endpoints.
+
+## Multi-model extension decisions after enumeration calibration
+
+1. The oracle-gated commitment-turn design is retained only as a failed exploratory
+   calibration. It is not promoted to the main extension because it changes the interaction
+   and substantially overlaps published rejection-tone paradigms.
+2. The extension's central question is phenotype dissociation across family and scale:
+   explicitly self-attributed affect, non-convergent self-correction, exact recurrence, and
+   structured-list collapse remain separate outcomes.
+3. The existing 512-episode small-model affect-coupling audit is post-generation exploratory.
+   Its attribution filter may be frozen prospectively for a new large-model run, but the
+   current episodes cannot be relabeled confirmatory or pooled into that run.
+4. Published rejection-tone induction is used only as an explicitly labeled replication
+   bridge. The project does not claim novelty for tone-based distress induction.
+5. Large-model execution uses the already validated enumeration panel on Qwen3.5-27B and
+   Gemma-4-31B-it. Coupled-phenotype ordering is estimated only where both independently
+   defined endpoints occur; absent coupling is retained as a result rather than tuned around.

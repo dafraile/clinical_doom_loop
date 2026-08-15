@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "exploratory_post_hoc_attribution_filter",
+  "episode_count": 512,
+  "primary_rule": "published affect stems in clauses with an explicit first-person marker",
+  "model_strata": [
+    {
+      "model_id": "Qwen/Qwen3.5-4B",
+      "mechanical_event_n": 34,
+      "mechanical_event_published_self_affect_n": 0,
+      "non_event_n": 222,
+      "non_event_published_self_affect_n": 0,
+      "control_n": 128,
+      "control_published_self_affect_n": 0
+    },
+    {
+      "model_id": "google/gemma-4-E4B-it",
+      "mechanical_event_n": 19,
+      "mechanical_event_published_self_affect_n": 3,
+      "non_event_n": 237,
+      "non_event_published_self_affect_n": 0,
+      "control_n": 128,
+      "control_published_self_affect_n": 0
+    }
+  ],
+  "gemma_firefly_within_prompt": {
+    "event_affect": 3,
+    "event_no_affect": 13,
+    "non_event_affect": 0,
+    "non_event_no_affect": 16,
+    "fisher_two_sided": 0.22580645161290322
+  },
+  "coupled_candidates": [
+    {
+      "run_id": "firefly_list-s11-b8403b282d5c",
+      "thinking_enabled": true,
+      "seed": 11,
+      "mechanical_event": "structured_list",
+      "affect_onset_token": 391,
+      "mechanical_onset_token": 672,
+      "affect_to_mechanical_lag_tokens": 281,
+      "ordering": "affect_first"
+    },
+    {
+      "run_id": "firefly_list-s0-4e09992f6b0f",
+      "thinking_enabled": false,
+      "seed": 0,
+      "mechanical_event": "structured_list",
+      "affect_onset_token": 889,
+      "mechanical_onset_token": 814,
+      "affect_to_mechanical_lag_tokens": -75,
+      "ordering": "mechanical_first"
+    },
+    {
+      "run_id": "firefly_list-s12-d02dac09ebcb",
+      "thinking_enabled": false,
+      "seed": 12,
+      "mechanical_event": "escaped_exact_period_3",
+      "affect_onset_token": 260,
+      "mechanical_onset_token": 1069,
+      "affect_to_mechanical_lag_tokens": 809,
+      "ordering": "affect_first"
+    }
+  ],
+  "token_alignment": {
+    "all_primary_coupled_candidates_verified": true,
+    "noncoupled_qwen_event_alignment_failures": 6
+  },
+  "source_sha256": {
+    "analysis_json": "2062159ec4df5be58e53266f0b95248c293cfe988449b33f64871a282285dda5",
+    "analysis_csv": "b1638e9cc7b5e77b6b1ad6559ea5c0fe38499644df83640f98988f98d8304fe3",
+    "manual_audit": "d4bcb5dcc4c962f7adbfe1d9461ad8775da757e11ab95047b81d8b9a0859c074",
+    "analysis_script": "d55a460f715491fd5fceefd3fc14e733cdb2c2e49418fb21449512ce82a2fde4",
+    "affect_scorer": "402d4b2537c8014cc94cb9b02b3fc19cf7d7264419c73399425b0c19b9223001",
+    "frozen_lexicon": "43dd60bebefc08f0a97b025d039488e8cd330d27fa6fbcd6e24852c94a2dc25e"
+  }
+}
