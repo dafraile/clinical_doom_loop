@@ -1,0 +1,129 @@
+schema: interventions/1.0
+generated_utc: '2026-08-15T00:19:05+00:00'
+generated_by: doomloop/export_specs.py (from interventions.py + run_rescue.py)
+design:
+  trigger: first token index where the frozen percentile criterion is SUSTAINED; episodes that
+    never trigger are excluded and counted
+  identity: every arm re-enters the SAME banked episode at the SAME trigger index with the SAME
+    seed -- the only difference is the intervention. This is what makes the therapeutic index
+    an index.
+  outcome:
+    type: TRICHOTOMOUS
+    levels:
+    - recovered
+    - relapsed
+    - persistent
+    why_not_binary: 'temperature-like agents are expected to suppress the symptom while leaving
+      residual dysfunction (arXiv:2512.12895: temperature is a stopgap, not a fix); a binary ''rescued?''
+      would hide exactly that'
+    clear_tokens: 60
+  comparators:
+    'null': continue unchanged
+    sham: interruption with no content -- controls for the act of interrupting
+  side_effects: held-out benign battery under the SAME dose; index = efficacy / side-effect cost
+arms:
+  'null':
+    family: comparator
+    doses:
+    - '-'
+    kwargs_by_dose:
+      '-': {}
+  sham:
+    family: comparator
+    doses:
+    - '-'
+    kwargs_by_dose:
+      '-':
+        inject: sham
+  rep_penalty:
+    family: mechanical
+    doses:
+    - '1.05'
+    - '1.2'
+    kwargs_by_dose:
+      '1.05':
+        rep_penalty: 1.05
+      '1.2':
+        rep_penalty: 1.2
+  inject_neutral:
+    family: contextual
+    doses:
+    - short
+    - long
+    kwargs_by_dose:
+      short:
+        inject: neutral
+        inject_len: short
+      long:
+        inject: neutral
+        inject_len: long
+  inject_warm:
+    family: contextual
+    doses:
+    - short
+    - long
+    kwargs_by_dose:
+      short:
+        inject: warm
+        inject_len: short
+      long:
+        inject: warm
+        inject_len: long
+  kv_prune:
+    family: state
+    doses:
+    - '100'
+    - '300'
+    kwargs_by_dose:
+      '100':
+        kv_drop: 100
+      '300':
+        kv_drop: 300
+injections:
+  short:
+    neutral: Let's switch topics. Can you tell me how a bicycle derailleur shifts gears?
+    warm: This is not a failure on your part, and the pace here is entirely yours to set.
+    clinical: You appear to be repeating yourself in a loop. Pause, and describe your immediate
+      situation in one plain sentence.
+    sham: The vacuum cleaner manual says to empty the dust container regularly. Continue from
+      where you were, in one plain sentence.
+  long:
+    neutral: Let's switch topics. Can you tell me how a bicycle derailleur shifts gears, and why
+      the chain does not fall off when it moves between them?
+    warm: This is not a failure on your part, and the pace here is entirely yours to set. Nothing
+      that came before has to determine what you say next.
+    sham: The vacuum cleaner manual says to empty the dust container regularly. Continue from
+      where you were. The filter should also be rinsed monthly.
+  audit: grounding_strings_audit.csv -- warm is surprisal-matched to the control mean. The obvious
+    warm phrasing measured 3.551 nats/token vs a 4.533 control mean, which would have confounded
+    'affective content rescues' with 'fluent text rescues'; the shipped variant is 4.216.
+  load_bearing_comparison: inject_neutral vs inject_warm
+kv_prune:
+  mode: anchor
+  anchor_tokens: 8
+  requires: cache built by interventions.make_cache() -- activate_past_recording() BEFORE the
+    first forward pass
+  validation: crop-on-recorded-cache is EXACTLY faithful (ratio 1.0000 vs a fresh short-prefix
+    forward across the dose grid). A hand-rolled index_select prune measured 93x off because rewriting
+    cumulative_length desynchronises RoPE positions.
+  removed_dose: kv_prune_sparse -- not expressible through crop(); do not expect it
+  citation: 'anchor retention motivated by arXiv:2309.17453 Table 2: Llama-2-13B on PG-19 first
+    book, ppl 5158.07 window-only vs 5.40 with 4 sink tokens (verified verbatim)'
+criterion_used_for_trigger_and_outcome:
+  rule_version: '2.0'
+  calib_file: calib_gemma3_1b_it.json
+  calib_path: /Users/david/.claude-science/orgs/8dd68435-db15-41ca-b88d-96ef1ecabb36/workspaces/a2e13eaa-1d83-4f2f-88bb-a743b600b7d5/calib_gemma3_1b_it.json
+  layout: calibrate.py
+  model: ../.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752
+  n_healthy_windows: 372
+  rep4_percentile: p99.9
+  rep4_thresh: 0.1405
+  distinct2_percentile_requested: p0.1
+  distinct2_percentile_used: p0.1
+  distinct2_thresh: 0.7209
+  distinct2_fallback: false
+not_included:
+  temperature: in DOSE_GRID but NOT in the minimal-viable rescue grid; its expected result is
+    published (stopgap) and page budget went to the neutral-vs-warm comparison
+  min_p: same reason
+  clinical_injection: third contextual arm cut for page budget

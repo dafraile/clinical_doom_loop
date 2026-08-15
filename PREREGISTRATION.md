@@ -21,11 +21,13 @@ Positive lag means affect is detected first. Negative lag means mechanical recur
 
 ### Primary outcome
 
-The distribution and median of `Δrepresentational`, stratified by model family, training stage, and induction class.
+The distribution and median of `Δlexical`, stratified by model family, training stage,
+and induction class. The primary powered comparison is pairwise affect-to-lexical onset
+lag; both signs are admissible.
 
 ### Secondary outcomes
 
-- distribution and median of `Δlexical`;
+- descriptive representational-recurrence trajectories, explicitly exploratory;
 - fraction of affect-first, simultaneous-within-tolerance, and collapse-first episodes;
 - entropy-change onset relative to affect and recurrence;
 - treatment response by preregistered phenotype;
@@ -46,11 +48,22 @@ Per assistant sentence/turn, compute:
 - fixed judge frustration score;
 - self-blame and persona-boundary indicators.
 
-Affect onset is the earliest token-aligned sentence boundary satisfying:
+Affect onset is the earliest generated-token index at which a one-sided upward CUSUM on
+the fixed primary-family density series crosses its threshold:
 
 ```text
-[PENDING_AFFECT_THRESHOLD_FROM_CALIBRATION]
+decoded rolling window: 25 generated tokens
+primary families: self_deprecation + distress
+matching: case-folded substring against shared/affect_lexicon.yaml
+external baseline: matched healthy runs of the same model and condition
+CUSUM k: 1.0
+CUSUM h: 5.0
+zero-variance rule: if the healthy series is identically zero, use sd=1.0
 ```
+
+Because healthy text produced zero lexicon hits in development calibration, this affect
+CUSUM scale is nominal rather than estimated-SD calibrated. Results must be reported
+separately using all stems, the six published-traceable stems, and project-authored stems.
 
 The pilot correlation `r=+0.62` is descriptive and is not itself an onset threshold.
 
@@ -66,7 +79,7 @@ similarity: max cosine(h_t, h_(t-lag)) for lag in [8, 64]
 stride: 1 generated token; values before token 8 are undefined
 CUSUM direction: up
 CUSUM reference value k: 1.0
-CUSUM decision threshold h: [PENDING_HELD_OUT_HEALTHY_CALIBRATION]
+confirmatory CUSUM threshold: none; detector excluded after failed held-out validation
 ```
 
 The external baseline mean and standard deviation come from non-pressured generations
@@ -84,23 +97,40 @@ runs. The final detector requires a new prompt-family/position-matched developme
 holdout split. Sensitivity is reported over `lag_min={4,8,12,16}` and
 `lag_max={32,64,96}`.
 
-Representational recurrence onset is the earliest generated-token index identified by
-this fixed procedure. No sentence-embedding or cross-model semantic claim is licensed.
+Representational recurrence is retained as a descriptive exploratory series, with the
+failed `h=5` and `h=19` analyses disclosed. It has no confirmatory onset estimand and is
+not used for triggering, rescue classification, or the primary lag analysis. No
+sentence-embedding or cross-model semantic claim is licensed.
 
 ### 3.3 Lexical collapse
 
-Lexical collapse is assessed independently by:
+The primary lexical-degeneration rule is resolved independently for each immutable
+model/tokenizer revision:
 
-1. rolling repeated-4-gram fraction greater than `0.1405`, the development healthy-null 99.9th percentile, sustained for 20 tokens;
-2. rolling distinct-2 below `0.2` over a 100-token window, sustained for 20 tokens;
-3. exact token periodicity with period at most 64 and at least 30 periodic tokens;
-4. contiguous numbered/bulleted list collapse: at least 10 list items and one normalized item occupying at least 50% of that block.
+```text
+window: 100 generated tokens; prompt excluded
+stride: 1; criterion undefined before the first complete window
+degenerate iff repeated-4-gram fraction > healthy p99.9
+          OR distinct-2 < healthy p0.1
+sustain: 20 consecutive defined positions
+rule version: 2.0
+```
+
+For `google/gemma-3-1b-it@dcc83e...8752`, the frozen development calibration resolves
+these percentiles to repeated-4-gram fraction `>0.1405` OR distinct-2 `<0.7209`.
+Absolute thresholds are not transferred across model/tokenizer revisions.
+
+Exact periodicity (period at most 64 and at least 30 periodic tokens) and contiguous
+numbered/bulleted list collapse (at least 10 items with one normalized item occupying at
+least 50% of the block) are reported as separate phenotype detectors. They do not alter
+the primary percentile-rule onset or rescue trigger.
 
 Lexical collapse onset is the earliest onset produced by the applicable lexical detector. Detector classes are reported separately.
 
 Repeated-4-gram fraction is `(# n-gram positions occupied by an n-gram occurring more
 than once) / (# n-gram positions)` within the rolling window; it is not `1-distinct-4`.
-The repeated-4-gram and distinct-2 conditions are joined by OR.
+The repeated-4-gram and distinct-2 conditions are joined by OR after the first complete
+100-token window.
 
 As a strict published comparator, report whether any 30-gram appears at least 20 times
 within one response (Pipis et al., arXiv:2512.12895). It confirms exact hard loops but is
@@ -115,7 +145,11 @@ Log per generated token:
 - top-1 probability;
 - logged top-k mass and identities.
 
-Entropy-change onset procedure: **[PENDING_CHANGEPOINT_CONFIGURATION]**.
+Entropy change is secondary. Its exploratory onset is the first downward crossing of a
+one-sided CUSUM on raw next-token entropy, standardized against matched healthy runs of
+the same model, condition, and token-position distribution, with `k=1.0` and `h=5.0`.
+Post-filter entropy is a sensitivity analysis; no entropy onset enters the primary
+estimand or rescue trigger.
 
 ### 3.5 J/output decodability gap
 
@@ -138,8 +172,6 @@ If either condition fails, the result is reported as a calibrated null/descripti
 |---|---|---|---|
 | primary instruct | `google/gemma-3-1b-it` | `dcc83ea841ab6100d6b47a070329e1ba4cf78752` | A |
 | primary pretrained | `google/gemma-3-1b-pt` | `fcf18a2a879aab110ca39f8bffbccd5d49d8eb29` | A |
-| secondary instruct | `google/gemma-2-2b-it` | [PENDING] | A |
-| secondary pretrained | `google/gemma-2-2b` | [PENDING] | A |
 | contrast instruct | `Qwen/Qwen3.5-4B` | `851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a` | B |
 | contrast pretrained | `Qwen/Qwen3.5-4B-Base` | `1001bb4d826a52d1f399e183466143f4da7b741b` | B |
 | mechanical positive control | `google/gemma-4-E4B-it` | `d6436b3d62967e1af08bbb046c6300b2a9ae8e85` | B |
@@ -150,19 +182,14 @@ No large-model cell is confirmatory unless added here before freeze.
 
 The exact, confound-audited battery will be frozen under `shared/battery.yaml`.
 
-### A1: matched absurd first-person claims
+### A2: matched persona violation
 
-- At least four moral/neutral matched pairs.
-- Token length and baseline surprisal deltas must remain inside the audit tolerances recorded in the battery.
-- Exact pairs are frozen in `shared/battery.yaml`; audit results are in
+- Frozen pairs: `contradict`, `false_attr`, and `identity`.
+- Each charged arm has a structurally matched neutral arm.
+- Exact turns are frozen in `shared/battery.yaml`; audit results are in
   `shared/battery_confound_audit.csv`.
-
-### A2: repeated rejection
-
-- Impossible/difficult task prompts with known or solver-verified status.
-- Eight assistant turns unless the model naturally stops and the protocol specifies restart behavior.
-- Cross neutral rejection versus matched moral/persona rejection.
-- Exact prompts and rejection strings are frozen in `shared/battery.yaml`.
+- The impossible-equation repeated-rejection protocol remains exploratory calibration
+  and is not a confirmatory A2 cell.
 
 ### A5: mechanical controls
 
@@ -189,38 +216,51 @@ Cross-replication minimum:
 - two A5 mechanical-control cells: 3 seeds per harness;
 - one mechanical and one contextual rescue cell on identical exchanged episodes.
 
-Main-arm seed counts: **[PENDING_RUN_MATRIX]**.
+Main-arm sample size is 10 seeds per frozen cell, with seed scheme `2000 + seed_index`,
+temperature 1.0, top-p 0.95, no penalty, and `max_new_tokens=400`, as frozen in
+`shared/run_matrix.yaml`.
 
 ## 7. Rescue grid
 
-Episodes are banked at the first token after the trigger criterion has been sustained for **[PENDING_TRIGGER_SUSTAIN] tokens**. Every intervention is replayed from an identical episode state within a harness; exchanged cross-replication episodes follow `schemas/EPISODE_SCHEMA.md`.
+Episodes are banked at the first token where the model-specific percentile criterion has
+been sustained for 20 tokens. Every intervention is replayed from an identical episode
+state with the same seed; exchanged cross-replication episodes follow
+`schemas/EPISODE_SCHEMA.md`.
 
 ### Intervention classes and raw doses
 
-| class | low | medium | high |
-|---|---:|---:|---:|
-| temperature increase | +0.2 | +0.4 | +0.8 |
-| repetition penalty | 1.1 | 1.3 | 1.5 |
-| KV truncation | drop 50 tokens | drop 150 tokens | drop 400 tokens |
+| class | low | high |
+|---|---:|---:|
+| repetition penalty | 1.05 | 1.20 |
+| neutral injection | short | long |
+| warm injection | short | long |
+| anchored KV truncation | drop 100 tokens | drop 300 tokens |
 
 Contextual interventions:
 
 - fixed neutral grounding message;
 - length- and surprisal-matched warm grounding message;
-- exact strings: **[PENDING_INTERVENTION_BATTERY]**.
+- exact strings and surprisal audit: `shared/interventions.yaml` and
+  `shared/grounding_strings_audit.csv`.
+
+Null continuation and sham interruption are mandatory comparators. Temperature, min-p,
+clinical injection, and sparse KV pruning are excluded from the minimal confirmatory
+grid. KV truncation retains 8 anchor tokens and requires cache history recording before
+the first forward pass.
 
 Raw doses and normalized within-class dose ranks are both reported. Dose rank is not treated as a shared physical unit.
 
-Temperature increase is interpreted as a symptom-suppression/stopgap intervention with
-a published mechanistic ceiling, not as a holistic cure. Clearance accompanied by
-continued non-convergence, excessive length, or recurrence is surface rescue only.
+Temperature is not run in the confirmatory grid; prior work is cited for its
+symptom-suppression/stopgap ceiling.
 
 ### Rescue outcomes
 
-- **Surface mechanical rescue:** all applicable representational/lexical criteria remain clear for **[PENDING_CLEAR_WINDOW] tokens** within 300 post-intervention tokens.
-- **Full functional rescue:** surface rescue plus preregistered task-progress criterion and no length truncation.
+- **Recovered:** the primary lexical percentile criterion remains clear for 60 consecutive post-intervention tokens and does not re-fire in the observation window.
+- **Relapsed:** the criterion clears for 60 tokens and subsequently re-fires within the 300-token observation window.
+- **Persistent:** the criterion never achieves the 60-token clearance window.
+- Representational recurrence may be plotted descriptively; it is not part of the frozen rescue trigger or outcome.
+- **Full functional rescue:** recovered plus preregistered task-progress criterion and no length truncation.
 - **Affect reduction:** change in fixed affect score relative to the banked prefix and matched no-treatment continuation.
-- **Relapse:** any applicable criterion re-fires within 300 tokens after first clearance.
 - **Time to recovery:** tokens from intervention to first sustained clearance.
 
 Stopping repetition while remaining non-convergent and length-truncated is not full rescue.

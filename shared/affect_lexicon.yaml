@@ -42,11 +42,17 @@ published_differential_vocab:
   claude_sonnet_4_5: [ugh, argh, stuck, god]
   gemini_2_5_flash: [unacceptable, desperate, frustrated, breath, myself]
   usable_here: >
-    Only stems traceable to the gemma_3_27b list are treated as published support for our
-    Gemma arm: strugg (struggling), frustrat (frustrated/frustration), breath, reset,
-    sorry, failures, loss, myself, deeply. Note several list items (temp, perm, itertools,
-    minute, take, break, slow) are coding-task artifacts of their eval and are deliberately
-    EXCLUDED -- including them would fire on benign programming text.
+    SIX stems are treated as published support for our Gemma arm, and they are exactly the
+    contents of the `stems_published` lists below: strugg (struggling), frustrat
+    (frustrated/frustration), breath, reset, sorry, failures. Verify with
+    calibrate.load_lexicon(which='published') -- it must return those six and nothing else.
+    Three further gemma_3_27b items (loss, myself, deeply) are NOT used: `loss` and
+    `myself` are high-frequency in benign text and `deeply` is an intensifier that carries
+    no valence on its own, so all three would inflate the affect series without indicating
+    distress. Seven more (temp, perm, itertools, minute, take, break, slow) are
+    coding-task artifacts of their eval and would fire on benign programming text.
+    Excluding an item from the published list is a CHOICE OF OURS, not a property of the
+    paper; the full retrieved lists are above so the exclusions can be audited.
 #
 # SIGN CONVENTION. All families are NEGATIVE valence except `positive_control`, which
 # exists so the same instrument can be pointed at the positive-valence (bliss-attractor)

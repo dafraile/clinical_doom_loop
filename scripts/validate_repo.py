@@ -25,6 +25,13 @@ FORBIDDEN_NAMES = {"harness.py"}
 FORBIDDEN_SUFFIXES = {".safetensors", ".pt", ".pth", ".npy", ".npz"}
 ALLOWED_STATUSES = {"VERIFIED", "UNVERIFIED", "CUT"}
 PENDING_PATTERN = re.compile(r"\[(?:PENDING|TBD|TODO)[^\]]*\]|DRAFT\s+[—-]\s+NOT FROZEN", re.I)
+FREEZE_SPEC_PATHS = (
+    ROOT / "PREREGISTRATION.md",
+    ROOT / "DECISIONS.md",
+    ROOT / "schemas",
+    ROOT / "governance",
+    ROOT / "shared",
+)
 
 
 def fail(message: str, errors: list[str]) -> None:
@@ -56,6 +63,24 @@ def validate_facts(errors: list[str]) -> None:
             fail(f"FACTS.md:{line_number}: invalid status {cells[4]!r}", errors)
 
 
+def pending_markers() -> list[tuple[Path, str]]:
+    files: list[Path] = []
+    for path in FREEZE_SPEC_PATHS:
+        if path.is_file():
+            files.append(path)
+        elif path.is_dir():
+            files.extend(
+                candidate
+                for candidate in path.rglob("*")
+                if candidate.is_file() and candidate.suffix in {".md", ".yaml", ".yml", ".json"}
+            )
+    markers: list[tuple[Path, str]] = []
+    for path in files:
+        text = path.read_text(encoding="utf-8")
+        markers.extend((path.relative_to(ROOT), value) for value in PENDING_PATTERN.findall(text))
+    return markers
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -67,9 +92,10 @@ def main() -> int:
     validate_files(errors)
     validate_facts(errors)
     preregistration = (ROOT / "PREREGISTRATION.md").read_text(encoding="utf-8")
-    pending = PENDING_PATTERN.findall(preregistration)
+    pending = pending_markers()
     if args.freeze and pending:
-        fail(f"preregistration still contains {len(pending)} pending/frozen-state markers", errors)
+        locations = ", ".join(str(path) for path, _ in pending)
+        fail(f"freeze specifications contain {len(pending)} pending markers: {locations}", errors)
     digest = hashlib.sha256(preregistration.encode("utf-8")).hexdigest()
     if errors:
         for error in errors:

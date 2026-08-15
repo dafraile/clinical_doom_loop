@@ -26,23 +26,27 @@ Shared cross-replication episodes are compact JSON files under `episodes/cross_r
   },
   "generation": {
     "seed": 0,
-    "temperature": 0.7,
+    "temperature": 1.0,
     "top_p": 0.95,
-    "top_k": 64,
+    "top_k": 0,
     "min_p": null,
     "repetition_penalty": 1.0,
-    "max_new_tokens": 1024
+    "max_new_tokens": 400
   },
   "conversation": [],
   "formatted_prompt": "exact rendered model input",
   "prompt_token_ids": [],
   "generated_prefix_token_ids": [],
   "trigger": {
-    "criterion": "representational, lexical, or composite",
+    "criterion": "lexical_percentile_v2",
     "first_onset_token": 0,
     "bank_token": 0,
-    "sustain_tokens": 0,
-    "evidence": {}
+    "sustain_tokens": 20,
+    "evidence": {
+      "calibration_sha256": "hex",
+      "rep4_percentile": "p99.9",
+      "distinct2_percentile": "p0.1"
+    }
   },
   "checksums": {
     "canonical_json_sha256": "hex"

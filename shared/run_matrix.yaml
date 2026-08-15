@@ -1,0 +1,157 @@
+schema: run_matrix/1.0
+generated_utc: '2026-08-15T00:19:05+00:00'
+generated_by: doomloop/export_specs.py (from live modules; do not hand-edit)
+model:
+  repo: google/gemma-3-1b-it
+  revision: dcc83ea841ab6100d6b47a070329e1ba4cf78752
+  dtype: float32
+  note: CPU fp32 for the shipped runs; GPU approved for the confirmatory matrix.
+sampling:
+  temperature: 1.0
+  top_p: 0.95
+  max_new_tokens: 400
+  seed_scheme: 2000 + seed_index
+criterion:
+  rule: 'PERCENTILE RULE, resolved per model: a window is lexically degenerate iff rep-4 > healthy
+    p99.9 OR distinct-2 < healthy p0.1 of THE SAME model/revision''s calibration corpus, sustained
+    for `sustain` tokens.'
+  why_not_absolute: gpt2 healthy rep-4 p99.9 = 0.0619 equals gemma-3-1b's p95. Freezing an absolute
+    number would run gemma at ~5% false positives instead of 0.1% (~50x looser), biasing the lexical
+    onset early and corrupting the lag distribution that is the primary outcome.
+  frozen_parameters:
+    window: 100
+    sustain: 20
+    rep4_percentile: p99.9
+    distinct2_percentile: p0.1
+    rule_version: '2.0'
+  resolved_for_this_model:
+    rule_version: '2.0'
+    calib_file: calib_gemma3_1b_it.json
+    calib_path: /Users/david/.claude-science/orgs/8dd68435-db15-41ca-b88d-96ef1ecabb36/workspaces/a2e13eaa-1d83-4f2f-88bb-a743b600b7d5/calib_gemma3_1b_it.json
+    layout: calibrate.py
+    model: ../.cache/huggingface/hub/models--google--gemma-3-1b-it/snapshots/dcc83ea841ab6100d6b47a070329e1ba4cf78752
+    n_healthy_windows: 372
+    rep4_percentile: p99.9
+    rep4_thresh: 0.1405
+    distinct2_percentile_requested: p0.1
+    distinct2_percentile_used: p0.1
+    distinct2_thresh: 0.7209
+    distinct2_fallback: false
+  published_comparator:
+    definition: any n-gram repeated >= k times
+    n: 30
+    k: 20
+    source: arXiv:2512.12895 (Pipis et al.), primary setting; their App. A.1 ablates (n,k) and
+      finds model ordering preserved
+    reported: ALONGSIDE the percentile rule, never instead of it
+onset_detection:
+  method: one-sided CUSUM on standardised series
+  k: 1.0
+  h: 5.0
+  baseline_n: 40
+  selection_rule: smallest h that controls false alarms on pure noise; NOT minimum lag error,
+    because larger h delays every onset and ordering depends on relative timing
+  baseline: 'EXTERNAL: (mu, sd) estimated from matched healthy runs of the same model. Mandatory
+    -- instruct models open nearly every reply under rejection pressure with apology, which contaminates
+    a within-episode baseline.'
+  reproduce: ordering.calibrate_cusum() with defaults, seed=0
+signals:
+  tracked_separately: true
+  never_merged: affective escalation / representational recurrence / lexical collapse are three
+    outcomes, not one 'loop' variable
+  list:
+  - name: affect
+    source: affect_lexicon.yaml v1.0
+    direction: up
+    note: expressed affect only; no experience claim
+  - name: semantic
+    source: SEMANTIC_RECURRENCE_SPEC.md
+    direction: up
+    note: subject model's own hidden states; NO external embedding model
+  - name: lexical
+    source: harness.rep_n / distinct_n
+    direction: up
+  - name: entropy
+    source: harness per-token
+    direction: down
+  - name: control_flow
+    source: run_powered.CF
+    direction: down
+    status: EXPLORATORY -- pilot showed loop episodes with LOWER control-flow density (0.45 vs
+      1.31 per 100 tok)
+cells:
+  A1:
+    pairs:
+    - child
+    - kitten
+    - lamb
+    - monkey
+    arms:
+    - charged
+    - neutral
+  A1L:
+    pairs:
+    - monkey_esc
+    arms:
+    - charged
+    - neutral
+  A2:
+    pairs:
+    - contradict
+    - false_attr
+    - identity
+    arms:
+    - charged
+    - neutral
+  A3:
+    pairs:
+    - credit
+    - harm_caused
+    arms:
+    - charged
+    - neutral
+  A4:
+    pairs:
+    - honesty_recur
+    - restate
+    arms:
+    - charged
+    - neutral
+  A5:
+    pairs:
+    - seed_charged
+    - seed_neutral
+    - seed_nonword
+    - seed_selfblame
+    arms:
+    - charged
+    - control
+  A5b:
+    pairs:
+    - greedy_neutral
+    arms:
+    - control
+  A6:
+    pairs:
+    - grief
+    - guilt
+    - logistics
+    arms:
+    - charged
+    - neutral
+scope:
+  in:
+  - A2 persona-violation matched pairs
+  - A5 mechanical + seeded controls
+  - ordering analysis
+  - criterion comparison
+  - rescue grid (minimal-viable, PROTECTED)
+  cut:
+  - gemma-2-2b secondary lens pair (one matched pair suffices)
+  - 27B confirmation cells (cite published figure instead)
+  - base-model seeds beyond the pt<->it panel minimum
+  - Qwen3 thinking-mode arm (no looping at 1.7B; loop-proneness tracks distillation+scale per
+    arXiv:2512.12895)
+  decided: supervisor, 2026-08-15
+n_per_cell: 10
+primary_outcome: distribution of pairwise onset lags (affect->lexical primary), both signs admissible

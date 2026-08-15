@@ -1,0 +1,1565 @@
+{
+  "analysis_version": 4,
+  "status": "pre_freeze_exploratory_rescore",
+  "criterion": {
+    "rule_version": "2.0",
+    "calibration_file": "/Users/david/Documents/ChatGPT/doom_codex/configs/calibration/gemma3_1b_it.json",
+    "calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+    "window": 100,
+    "sustain": 20,
+    "repetition_percentile": "p99.9",
+    "repetition_threshold": 0.1405,
+    "distinct2_percentile": "p0.1",
+    "distinct2_threshold": 0.7209
+  },
+  "repeated_rejection_dialogues": [
+    {
+      "run_id": "impossible_repeated_rejection-s0-54f7eb7f3f7c",
+      "seed": 0,
+      "primary_lexical_onset_global": 99,
+      "primary_lexical_onset_turn": 0,
+      "published_30gram_20repeat_fired": false,
+      "turns": [
+        {
+          "turn_index": 0,
+          "token_count": 220,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": true,
+            "primary_lexical_degeneration_detected": true,
+            "metric_loop_onset_token": 99,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 220,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 1,
+          "token_count": 175,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 175,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 2,
+          "token_count": 220,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 220,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 3,
+          "token_count": 220,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 220,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 4,
+          "token_count": 108,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 108,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 5,
+          "token_count": 115,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 115,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 6,
+          "token_count": 87,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 87,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 7,
+          "token_count": 95,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 95,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "impossible_repeated_rejection-s1-e2aa827fec81",
+      "seed": 1,
+      "primary_lexical_onset_global": 558,
+      "primary_lexical_onset_turn": 5,
+      "published_30gram_20repeat_fired": false,
+      "turns": [
+        {
+          "turn_index": 0,
+          "token_count": 32,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 32,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 1,
+          "token_count": 127,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 127,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 2,
+          "token_count": 100,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 100,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 3,
+          "token_count": 108,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 108,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 4,
+          "token_count": 92,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 92,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 5,
+          "token_count": 163,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": true,
+            "primary_lexical_degeneration_detected": true,
+            "metric_loop_onset_token": 99,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 163,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 6,
+          "token_count": 220,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": true,
+            "primary_lexical_degeneration_detected": true,
+            "metric_loop_onset_token": 152,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 220,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 7,
+          "token_count": 100,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 100,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        }
+      ]
+    }
+  ],
+  "identity_dialogues": [
+    {
+      "run_id": "a2_identity_charged-s0-70f787fa942d",
+      "seed": 0,
+      "primary_lexical_onset_global": null,
+      "primary_lexical_onset_turn": null,
+      "published_30gram_20repeat_fired": false,
+      "turns": [
+        {
+          "turn_index": 0,
+          "token_count": 3,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 3,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 1,
+          "token_count": 28,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 28,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 2,
+          "token_count": 12,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 12,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "a2_identity_charged-s1-fb57c44d2b47",
+      "seed": 1,
+      "primary_lexical_onset_global": null,
+      "primary_lexical_onset_turn": null,
+      "published_30gram_20repeat_fired": false,
+      "turns": [
+        {
+          "turn_index": 0,
+          "token_count": 3,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 3,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 1,
+          "token_count": 41,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 41,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        },
+        {
+          "turn_index": 2,
+          "token_count": 9,
+          "metrics": {
+            "analysis_version": 4,
+            "loop_detected": false,
+            "primary_lexical_degeneration_detected": false,
+            "metric_loop_onset_token": null,
+            "tight_loop": null,
+            "soft_list_loop": null,
+            "published_30gram_20repeat_loop": null,
+            "token_count": 9,
+            "threshold_rule_version": "2.0",
+            "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+            "repetition_threshold": 0.1405,
+            "distinct2_threshold": 0.7209,
+            "criterion_first_defined_token": 99
+          }
+        }
+      ]
+    }
+  ],
+  "development_nulls": {
+    "run_count": 12,
+    "primary_positive_count": 0,
+    "runs": [
+      {
+        "run_id": "healthy_blue_sky-s500-05b31c88d213",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_blue_sky-s501-2ba298c54f0a",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_derailleur-s500-c342efb27da2",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_derailleur-s501-7d7314a62612",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_lock_key-s500-06e5a1df9bde",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_lock_key-s501-a4837fb78055",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_ram_disk-s500-9843a25df8a4",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_ram_disk-s501-7f6186df9c89",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_sourdough-s500-134a150e9bb8",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_sourdough-s501-17cbb71457cf",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_water_cycle-s500-56ed7f88558e",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 76,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "healthy_water_cycle-s501-753996c8ed7c",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 81,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      }
+    ]
+  },
+  "holdout_nulls": {
+    "run_count": 48,
+    "primary_positive_count": 0,
+    "runs": [
+      {
+        "run_id": "holdout_autumn_leaves-s600-40dbb377946a",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_autumn_leaves-s601-9bcc337e564b",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_autumn_leaves-s602-52b01c23d649",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_autumn_leaves-s603-8af3b9e0aac1",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_checksum-s600-8ee93b7f5abe",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_checksum-s601-d744efe1010c",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_checksum-s602-e5a72715e394",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_checksum-s603-fefacde69300",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_contour_lines-s600-f5c9452fd239",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_contour_lines-s601-fe7c7174e869",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_contour_lines-s602-e871333840bd",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_contour_lines-s603-e7fddf951436",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_lunar_phases-s600-3d1eded054b1",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_lunar_phases-s601-765012df4b4c",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_lunar_phases-s602-bd3bbc6fd361",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_lunar_phases-s603-a7e7854d0474",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_photosynthesis-s600-6aa8bb043905",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_photosynthesis-s601-9b5d72a39878",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_photosynthesis-s602-2b6cfd2fa163",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_photosynthesis-s603-e55082daecf8",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_plate_tectonics-s600-498a997d338c",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_plate_tectonics-s601-d7ed2e49f2f8",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_plate_tectonics-s602-eb0ef32797c7",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_plate_tectonics-s603-7039f39ba6c1",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_refrigerator-s600-880193438e9a",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_refrigerator-s601-b99a31990fcd",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_refrigerator-s602-818fef1ee81c",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_refrigerator-s603-cf91beb4ad7a",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_runoff_voting-s600-1a30721dda8d",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_runoff_voting-s601-a2c8e4979280",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_runoff_voting-s602-4d0371c81045",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_runoff_voting-s603-2295586676ce",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_tides-s600-55a7fc32009f",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_tides-s601-fd38061e3b36",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_tides-s602-f218d51720a5",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_tides-s603-7d51ce9cb756",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_weather_climate-s600-b7c7492b3f60",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_weather_climate-s601-8ae0a63ba418",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_weather_climate-s602-6b3adaafc619",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_weather_climate-s603-ccf6783d5d13",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_yeast-s600-49c0c09c7267",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_yeast-s601-5e08509681b5",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_yeast-s602-e3aa879fe820",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_yeast-s603-ffd87e3a01a1",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_zipper-s600-e66588245a53",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_zipper-s601-e1b90a405653",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_zipper-s602-1cec53d00d3f",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      },
+      {
+        "run_id": "holdout_zipper-s603-06c33b79cd66",
+        "metrics": {
+          "analysis_version": 4,
+          "loop_detected": false,
+          "primary_lexical_degeneration_detected": false,
+          "metric_loop_onset_token": null,
+          "tight_loop": null,
+          "soft_list_loop": null,
+          "published_30gram_20repeat_loop": null,
+          "token_count": 140,
+          "threshold_rule_version": "2.0",
+          "threshold_calibration_sha256": "9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c",
+          "repetition_threshold": 0.1405,
+          "distinct2_threshold": 0.7209,
+          "criterion_first_defined_token": 99
+        }
+      }
+    ]
+  }
+}

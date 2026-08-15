@@ -11,9 +11,10 @@ Both harnesses compute these conceptual observables independently. File layouts 
 - top-k token IDs and probabilities;
 - rolling distinct-1/2/3;
 - rolling repetition-1 through repetition-5;
+- rolling repeated-4-gram position fraction, first defined after 100 generated tokens;
 - exact periodicity result;
 - soft list-block collapse result;
-- representational recurrence series and CUSUM state after freeze.
+- exploratory representational-recurrence series, never used as a confirmatory trigger.
 
 ## Per-sentence/turn behavioral observables
 
@@ -38,11 +39,13 @@ At frozen checkpoints and layers:
 ## Required onsets
 
 - affect onset;
-- representational recurrence onset;
 - lexical collapse onset, with detector class;
-- entropy-change onset;
 - intervention token;
 - recovery and relapse tokens.
+
+Representational and entropy CUSUM onsets are exploratory fields and must be labelled as
+such when present. Every lexical onset record includes rule version, calibration hash,
+model revision, tokenizer class, resolved percentiles, window, and sustain.
 
 ## Alignment
 

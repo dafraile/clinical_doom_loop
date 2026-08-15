@@ -16,5 +16,6 @@ Supporting frozen/provenance inputs are also retained here:
 - `representational_recurrence_spec.md`;
 - `criterion_comparison.csv` and `prior_art_2512.12895.md`.
 
-`run_matrix.yaml` and `interventions.yaml` remain absent and are freeze blockers. No
-Agent A harness, ordering, or intervention implementation source was imported.
+`run_matrix.yaml` and `interventions.yaml` were imported from verified packet v1.5. No
+Agent A harness, ordering, threshold, runner, or intervention implementation source was
+imported.

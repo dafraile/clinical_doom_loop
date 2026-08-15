@@ -91,6 +91,7 @@ seeds. The sign remained positive for all 12 combinations of
 results, not confirmatory estimates. Full values and run IDs are in
 `docs/exploratory/pre_freeze_recurrence_calibration.json`.
 
-Any confirmatory figure using this signal remains pending until the held-out null check
-The replacement calibration must match discourse form, prompt family, and token/turn
-position, then use a fresh held-out null bank.
+The signal is excluded from confirmatory onset and rescue definitions for this freeze.
+Further work may develop a discourse-, prompt-family-, and token/turn-position-matched
+detector using a fresh development/holdout split, but that would be a separately
+registered exploratory extension.

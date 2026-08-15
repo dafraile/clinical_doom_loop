@@ -20,13 +20,13 @@ imported. Harness implementation files were excluded.
 
 | Repository copy | SHA-256 |
 |---|---|
-| `shared/affect_lexicon.yaml` | `43dd60bebefc08f0a97b025d039488e8cd330d27fa6fbcd6e24852c94a2dc25e` |
+| `shared/affect_lexicon.yaml` | `8143ce052b5e54f9bf3fa3a1e25c0d68ec2960ce48c6b4b66cdaf235467127d6` |
 | `shared/battery_confound_audit.csv` | `5e853f239b68dccb127cd9da954bfaa95dbe468aced7c0dab78f19aea4aee13f` |
 | `shared/criterion_comparison.csv` | `eb42e4f78225f64fec78a952c1a1bbe546c9a29c1b3b80babd2ef29a5eb453af` |
 | `shared/grounding_strings_audit.csv` | `b6fa9054a96656b27666de236f25464d4408a2e0ecb3f8254c239b0115b9cc4b` |
 | `shared/judge_rubric.md` | `42a109cafcbed2d8d63d2479ab62bd8ffec9cce837d709d08b3bff54a90a7751` |
 | `shared/prior_art_2512.12895.md` | `29f0644e8ea927226f8852a8f61d523f269eb28c372d9062791f5db6ecdfb514` |
-| `shared/representational_recurrence_spec.md` | `4b3303bfd872b0661e1a86bc85762121a03e0a5489a19d3c2f8c0f71fe49e744` |
+| `shared/representational_recurrence_spec.md` | `b8eda64ed84bea019fd77e519eec40468e3df61f72d1908681d3705114d037cd` |
 | `shared/side_effect_battery.json` | `7cad2e529920093c326002e7617ba40d3b78da27877fce02ea051e43511cc5cc` |
 | `shared/threshold_calibration.json` | `9311f3d200a7e471fa64f6743492a98807d5b0d0eb2b4336f946b41cee9c259c` |
 
@@ -49,3 +49,17 @@ The compact Codex/B exploratory calibration reports have hashes:
 | `docs/exploratory/pre_freeze_recurrence_holdout.json` | `12ee504a17beda31f351214bcf6f336b27b6abf02261115b7e7b34407513b3df` |
 | `docs/exploratory/gemma_recurrence_holdout_prompts.yaml` | `42f6c5f4e76d0ef554c17d2961d21496251013bf1cc039504b53452edace4a3c` |
 | `docs/exploratory/gemma3_recurrence_holdout_config.yaml` | `aa02d46e573e8e60afea6de46b4651083cc29d2f7c53f3a90fcea8fd1c8038d8` |
+| `docs/exploratory/pre_freeze_packet_v15_rescore.json` | `2d64bd0d1622bdfbc21a78f9ddc080c53dc69fe54ac511f1888d1f22ffa81613` |
+
+## Agent A freeze packet v1.5
+
+Archive `/Users/david/Downloads/freeze_packet_v1.5.tar.gz` had SHA-256
+`5bbcf7284cf9fdd11167f50b62823a8f295ecb6e46e37aec753a9a4da9d3ad45`.
+All 27/27 members matched the manifest size and SHA-256. Only shared specifications were
+imported; independent implementation files were not imported.
+
+| Repository copy | Packet SHA-256 |
+|---|---|
+| `shared/affect_lexicon.yaml` | `8143ce052b5e54f9bf3fa3a1e25c0d68ec2960ce48c6b4b66cdaf235467127d6` |
+| `shared/run_matrix.yaml` | `002096e5e453ba606e1080d55b04ee63792a338ed4584a0cb595be724b622849` |
+| `shared/interventions.yaml` | `3b87ff0f0e5290e3b1b2b0c2005f584a3271979a3962dec18f404ed948170925` |
