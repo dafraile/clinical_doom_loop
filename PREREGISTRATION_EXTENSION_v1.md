@@ -94,9 +94,17 @@ external comparators only.
 
 For every episode:
 
-1. sustained same-model-calibrated lexical degeneration (binary and onset token);
-2. natural termination before the budget;
-3. functional task completion/progress.
+1. exact token-periodic loop (binary and onset token);
+2. structured-list collapse (binary and onset token, only where list structure is expected);
+3. natural termination before the budget;
+4. functional task completion/progress.
+
+Exact periodicity and list collapse are separate co-primary outcomes and are never pooled
+into a single event count. The completed pilot's broad rolling lexical-percentile rule is
+not a primary endpoint in this extension: during pre-freeze Gemma E4B calibration it fired
+repeatedly on normal, naturally terminated EU country/year lists while the exact, list-
+collapse, and strict 30-gram detectors remained negative. A newly calibrated broad lexical
+series may be reported only as secondary instrument development.
 
 The primary estimands are marginal risk differences for each outcome:
 
@@ -107,10 +115,10 @@ The primary estimands are marginal risk differences for each outcome:
 
 ### Secondary outcomes
 
-- exact token periodicity;
+- same-model-calibrated rolling lexical degeneration, with all development and holdout
+  false alerts disclosed;
 - strict 30-gram repetition;
 - Antidoom character-repeat comparator;
-- structured-list collapse;
 - affective-expression onset and peak;
 - budget-exhausted non-convergence, adjudicated independently of truncation alone;
 - relapse and functional rescue on banked episodes;
@@ -133,9 +141,11 @@ Before powered generation for a model revision:
 
 1. **Template/EOS gate:** 24 mixed easy and long responses; zero generation past the
    model's native end-of-turn/EOS token.
-2. **Null detector gate:** at least 100 model- and condition-matched healthy responses;
-   freeze p99.9/p0.1 thresholds and a disjoint 100-response holdout; observed holdout
-   false-alert upper confidence bound must be reported.
+2. **Null detector gate:** exact-period and structured-list detectors are audited on at
+   least 100 model- and condition-matched non-induced responses. Any rolling percentile
+   detector uses a separate 100-response development set and disjoint 100-response holdout;
+   its observed holdout false-alert upper confidence bound must be reported, but failure
+   excludes only that secondary instrument rather than changing a primary endpoint.
 3. **Oracle gate:** 1,000 generated arithmetic tasks and 1,000 mutated invalid traces;
    exact validator sensitivity and specificity must both be 1.0 on this finite suite.
 4. **Phenotype gate:** at least one prespecified positive-control prompt produces its

@@ -195,8 +195,10 @@ The extension will preserve the provenance of each stratum rather than pooling t
 
 1. **Exact periodic loop:** token-period detector and published 30-gram comparator.
 2. **List collapse:** contiguous structured-list duplicate/collapse rule.
-3. **Sustained lexical degeneration:** same-model, same-decoding null-calibrated rolling
-   rule; thresholds are never transferred between tokenizers.
+3. **Sustained lexical degeneration (secondary instrument):** same-model, same-decoding
+   null-calibrated rolling rule; thresholds are never transferred between tokenizers, and
+   failure on structured healthy text excludes this instrument rather than redefining a
+   primary loop.
 4. **Non-convergent self-correction:** budget exhaustion plus repeated strategy/state
    revisitation and failure to improve oracle task state; never inferred from length alone.
 5. **Affective expression:** fixed lexicon and blinded judge score with a direct quote;
@@ -233,4 +235,3 @@ The last two Raikhen repositories are independent follow-ups, not official paper
 - https://arxiv.org/abs/2606.13705
 - https://www.liquid.ai/blog/antidoom
 - https://github.com/Liquid4All/antidoom
-
