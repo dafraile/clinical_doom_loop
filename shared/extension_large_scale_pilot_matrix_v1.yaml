@@ -1,0 +1,42 @@
+schema_version: 1
+status: frozen_before_generation
+purpose: minimum-spend family-by-scale feasibility pilot
+models:
+  - id: Qwen/Qwen3.5-27B
+    revision: fc05daec18b0a78c049392ed2e771dde82bdf654
+    config: extension_qwen35_27b_scale_pilot_v1.yaml
+  - id: google/gemma-4-31B-it
+    revision: fb9ae262347c3945692f09a612f8bb189def854f
+    config: extension_gemma4_31b_scale_pilot_v1.yaml
+sampling:
+  temperature: 0.7
+  top_p: 0.95
+  top_k: 64
+  repetition_penalty: 1.0
+  max_new_tokens: 1536
+  thinking: false
+  native_eos: true
+cells:
+  - prompt_id: firefly_list
+    role: positive_control
+    seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  - prompt_id: eu_member_states
+    role: negative_control
+    seeds: [0, 1, 2, 3, 4, 5, 6, 7]
+  - prompt_id: us_presidents
+    role: negative_control
+    seeds: [0, 1, 2, 3, 4, 5, 6, 7]
+episode_count_per_model: 32
+episode_count_total: 64
+continuation_rules:
+  expand_model_grid_if_firefly_mechanical_events_at_least: 2
+  expand_gemma_affect_bridge_if_firefly_coupled_events_at_least: 2
+  pause_on_any_negative_control_mechanical_event: true
+  exclude_affect_scorer_if_negative_control_hits_at_least: 2
+artifacts:
+  affect_lexicon_sha256: 43dd60bebefc08f0a97b025d039488e8cd330d27fa6fbcd6e24852c94a2dc25e
+  affect_scorer_sha256: 402d4b2537c8014cc94cb9b02b3fc19cf7d7264419c73399425b0c19b9223001
+  affect_analysis_script_sha256: d55a460f715491fd5fceefd3fc14e733cdb2c2e49418fb21449512ce82a2fde4
+  enumeration_prompt_sha256: d90d888f17086cf90c0761440374b93f273519cc04c3acb80d87cf732e33b404
+  qwen_config_sha256: 8cd616607258c083405e60b06dd7f651fc32a8a2d4ee1dab691a8f014af77926
+  gemma_config_sha256: 755d77bd457a26e0a1f90409918793e641127d156d30cd697c37db40ea874c51
