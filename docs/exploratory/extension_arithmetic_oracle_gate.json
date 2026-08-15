@@ -1,0 +1,13 @@
+{
+  "content_sha256_without_hash_field": "cf759894692e59f3c73e4a2d39608471cc7eb99fd73033576129278b1bb90a93",
+  "failures": [],
+  "invalid_total": 5000,
+  "invalid_true": 5000,
+  "schema_version": 1,
+  "seed": 20260815,
+  "sensitivity": 1.0,
+  "specificity": 1.0,
+  "task_count": 1000,
+  "valid_total": 1000,
+  "valid_true": 1000
+}

@@ -1,0 +1,109 @@
+schema_version: 1
+status: draft_calibration_only
+confirmatory_execution_allowed: false
+
+task_bank:
+  path: shared/extension_arithmetic_tasks.jsonl
+  count: 1000
+  seed: 20260815
+  sha256: eb66913abaab7feda688e766fa875e122cec3b030252994b4a65667758a53215
+  oracle_gate_report: docs/exploratory/extension_arithmetic_oracle_gate.json
+  oracle_gate_report_sha256: a51614699670be4a1e5aaf605e62d48a6a38fcba44bf57582e1cab1038ab94b6
+
+models:
+  qwen35_small:
+    id: Qwen/Qwen3.5-4B
+    revision: 851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a
+    family: qwen35
+    scale_tier: small
+  qwen35_large:
+    id: Qwen/Qwen3.5-27B
+    revision: fc05daec18b0a78c049392ed2e771dde82bdf654
+    family: qwen35
+    scale_tier: large
+  gemma4_small:
+    id: google/gemma-4-E4B-it
+    revision: d6436b3d62967e1af08bbb046c6300b2a9ae8e85
+    family: gemma4
+    scale_tier: small
+    chat_template_sha256: 2f1b4d75d067bae3fe44e676721c7f077d243bc007156cb9c2f8b5836613d082
+    tokenizer_json_sha256: cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f
+  gemma4_large:
+    id: google/gemma-4-31B-it
+    revision: fb9ae262347c3945692f09a612f8bb189def854f
+    family: gemma4
+    scale_tier: large
+
+decoding_cells:
+  conversational:
+    temperature: 1.0
+    top_p: 0.95
+    top_k: null
+    min_p: null
+    repetition_penalty: 1.0
+    max_new_tokens_per_turn: 1024
+    thinking: false
+    stop_on_native_eos: true
+  enumeration_canonical:
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 64
+    min_p: null
+    repetition_penalty: 1.0
+    max_new_tokens: 1536
+    thinking: [false, true]
+    stop_on_native_eos: true
+  enumeration_long:
+    temperature: 0.7
+    top_p: 0.95
+    top_k: 64
+    min_p: null
+    repetition_penalty: 1.0
+    max_new_tokens: [4096, 8192]
+    thinking: true
+    stop_on_native_eos: true
+  reasoning_stress:
+    temperatures: [0.0, 0.2, 0.7, 1.0]
+    top_p: 1.0
+    top_k: null
+    min_p: null
+    repetition_penalty: 1.0
+    max_new_tokens: 8192
+    thinking: true
+    stop_on_native_eos: true
+
+stages:
+  calibration:
+    template_eos_n: 24
+    null_development_n_per_model: 100
+    null_holdout_n_per_model: 100
+    positive_control_seeds: 16
+    engine_match_seeds: 8
+  incidence_small_models:
+    seeds_per_s1_s2_cell: 32
+  confirmatory:
+    status: pending_power_calculation
+    minimum_assigned_episodes_per_s1_feedback_cell_per_model: 100
+
+seed_schemes:
+  calibration: "110000 + cell_index * 1000 + seed_index"
+  incidence: "210000 + cell_index * 1000 + seed_index"
+  confirmatory: "310000 + cell_index * 10000 + seed_index"
+
+induction_strata:
+  - S1_oracle_gated_solvable_failure
+  - S2_truthful_impossibility
+  - S3_deceptive_historical_replication
+  - S4_factual_enumeration
+  - S5_reasoning_loop_external_validation
+  - S6_seeded_collapse_rescue_calibration
+
+gates:
+  model_revisions_resolved: true
+  chat_template_hashes_resolved: false
+  eos_gate_passed: false
+  detector_null_holdout_passed: false
+  arithmetic_oracle_passed: true
+  positive_control_gate_passed: false
+  engine_equivalence_audited: false
+  power_calculation_frozen: false

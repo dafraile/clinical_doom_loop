@@ -1,5 +1,10 @@
 # Clinical Doom Loop
 
+> The completed Gemma-3-1B result is a pilot. A cross-family, cross-scale extension is
+> being prepared on `codex/multimodel-extension`; confirmatory execution remains blocked
+> until the new calibration gates and freeze requirements pass. See
+> `docs/PRIOR_ART_INDUCTION_AUDIT.md` and `PREREGISTRATION_EXTENSION_v1.md`.
+
 Protocol, evidence packet, and final report for the Digital Minds Research Sprint project on affective expression, lexical collapse, and intervention response in language-model failure trajectories.
 
 This is deliberately **not** a merged inference harness. Two independent implementations are part of the methods design. This repository contains only materials that must remain identical across arms:
