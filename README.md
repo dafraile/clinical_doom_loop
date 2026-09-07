@@ -23,6 +23,14 @@ Final submission artifacts:
 - [`reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.docx`](reports/final_submission/Distress_Expression_Is_Not_Distress_Dynamics.docx)
 - [`reports/final_submission/report_source.md`](reports/final_submission/report_source.md)
 
+## Paper
+
+**Auditing Doom Loops: Turn Boundaries, Unequal Exposure, and Affective Readouts** (preprint, September 2026; submitted to a NeurIPS 2026 workshop).
+
+- PDF: [`reports/neurips_2026/Auditing_Doom_Loops_preprint.pdf`](reports/neurips_2026/Auditing_Doom_Loops_preprint.pdf)
+
+The paper extends the sprint report above with a three-part measurement audit: a turn-boundary scoring artifact in Gemma 3 1B, an exposure (response-length) artifact in the charged-versus-neutral comparison, and a controlled negative result for Jacobian-lens affective readouts at 48 Qwen loop onsets.
+
 ## Repository boundary
 
 Allowed here:
